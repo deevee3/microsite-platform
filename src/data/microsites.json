@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "domain": "hvacrepair-cincinnati-oh.com",
+    "vertical": "HVAC Repair",
+    "service_description": "Reliable Cincinnati HVAC repair with licensed technicians available 24/7 for emergency heating and cooling services across Hamilton County.",
+    "city": "Cincinnati",
+    "state": "OH",
+    "hero_headline": "Emergency HVAC Repair in Cincinnati",
+    "hero_subheadline": "Trusted, licensed technicians serving Cincinnati and surrounding neighborhoods 24/7",
+    "service_features": [
+      {
+        "title": "Rapid Dispatch",
+        "description": "Average on-site response in under 2 hours across Greater Cincinnati.",
+        "icon": "truck"
+      },
+      {
+        "title": "Certified Experts",
+        "description": "EPA-certified techs experienced with commercial and residential systems.",
+        "icon": "badge-check"
+      },
+      {
+        "title": "Transparent Pricing",
+        "description": "Upfront diagnostic fee credited toward approved repairs.",
+        "icon": "wallet"
+      }
+    ],
+    "primary_phone": "+1-513-555-0100",
+    "call_tracking_number": "+1-513-555-0200",
+    "form_recipient_email": "leads+cincinnati@hvacpartners.com",
+    "form_recipient_name": "Cincinnati Lead Desk",
+    "cta_blocks": [
+      {
+        "label": "Call Now",
+        "url": "tel:+15135550100",
+        "style": "primary"
+      },
+      {
+        "label": "Request Service",
+        "url": "https://hvacrepair-cincinnati-oh.com/#contact-form",
+        "style": "secondary"
+      }
+    ],
+    "faq": [
+      {
+        "question": "Do you provide emergency HVAC repair in Cincinnati?",
+        "answer": "<p>Yes. Our on-call team covers Cincinnati, Norwood, and surrounding neighborhoods with priority dispatch for no-heat or no-cool situations.</p>"
+      },
+      {
+        "question": "What HVAC brands do you service?",
+        "answer": "<p>We service all major HVAC brands including Trane, Carrier, Lennox, Goodman, and Daikin systems.</p>"
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "They restored cooling to our downtown office before the workday ended—excellent communication and service!",
+        "attribution": "Facilities Manager",
+        "role": "Cincinnati, OH"
+      }
+    ],
+    "seo_title": "Cincinnati HVAC Repair | 24/7 Emergency Heating & Cooling",
+    "seo_description": "Need fast HVAC repair in Cincinnati? Schedule same-day service with licensed technicians for heating and cooling emergencies.",
+    "analytics": {
+      "enabled": true,
+      "provider": "plausible",
+      "script_url": "https://plausible.io/js/script.js"
+    },
+    "build_status": "deployed"
+  }
+]
