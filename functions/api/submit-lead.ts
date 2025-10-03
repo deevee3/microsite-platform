@@ -61,7 +61,7 @@ export const onRequestPost = async ({ request, env }: PagesContext): Promise<Res
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "onboarding@resend.dev",
+        from: "jonathan@kerrystone.uk",
         to: payload.recipient_email,
         subject: `New HVAC Lead: ${payload.city}, ${payload.state}`,
         html: `
