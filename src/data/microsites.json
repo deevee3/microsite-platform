@@ -273,5 +273,94 @@
       "script_url": "https://plausible.io/js/script.js"
     },
     "build_status": "pending"
+  },
+  {
+    "id": 4,
+    "domain": "hvacrepair-newport-ky.com",
+    "vertical": "HVAC Repair",
+    "service_description": "Newport, Kentucky's 24/7 HVAC referral desk. We match urgent furnace, AC, and heat pump calls with nearby state-licensed technicians across Northern Kentucky, including Covington, Bellevue, Dayton, Fort Thomas, and Highland Heights.",
+    "city": "Newport",
+    "state": "KY",
+    "hero_headline": "Emergency HVAC Repair in Newport, KY",
+    "hero_subheadline": "A network of state-licensed HVAC professionals on call 24/7 across Newport and Northern Kentucky neighborhoods",
+    "service_features": [
+      {
+        "title": "Rapid Northern Kentucky Matching",
+        "description": "We route your emergency to the closest available pro to minimize downtime across Newport, Covington, Bellevue, and Fort Thomas.",
+        "icon": "clock"
+      },
+      {
+        "title": "Licensed & Insured Contractors",
+        "description": "We connect you with Kentucky-licensed HVAC contractors who maintain required liability coverage for heating and cooling work.",
+        "icon": "badge-check"
+      },
+      {
+        "title": "Transparent Contractor Options",
+        "description": "Review clear diagnostics and repair paths directly from the contractor before any work begins—no pressure, no surprises.",
+        "icon": "receipt"
+      }
+    ],
+    "primary_phone": "+1-513-235-7523",
+    "call_tracking_number": "+1-513-235-7523",
+    "form_recipient_email": "dvaughnhouse@gmail.com",
+    "form_recipient_name": "Newport Lead Desk",
+    "cta_blocks": [
+      {
+        "label": "Call Newport 24/7",
+        "url": "tel:+15132357523",
+        "style": "primary"
+      },
+      {
+        "label": "Request Emergency Service",
+        "url": "https://hvacrepair-newport-ky.com/#contact-form",
+        "style": "secondary"
+      }
+    ],
+    "faq": [
+      {
+        "question": "Are you the HVAC contractor?",
+        "answer": "<p>No. We operate as a referral service, connecting you with independent, state-licensed HVAC professionals in Northern Kentucky.</p>"
+      },
+      {
+        "question": "Which areas do you cover?",
+        "answer": "<p>We match emergency jobs across Newport, Covington, Bellevue, Dayton (KY), Fort Thomas, Highland Heights, and nearby riverfront neighborhoods.</p>"
+      },
+      {
+        "question": "How quickly can someone arrive?",
+        "answer": "<p>Arrival times depend on technician availability, traffic, and weather. We prioritize no-heat and no-cool calls to find the nearest pro fast.</p>"
+      },
+      {
+        "question": "What systems and brands are supported?",
+        "answer": "<p>Furnaces, central AC, heat pumps, mini-splits, and light-commercial rooftop units from leading brands such as Trane, Carrier, Lennox, Goodman, and Rheem.</p>"
+      },
+      {
+        "question": "Are technicians licensed and insured?",
+        "answer": "<p>We aim to connect you with contractors licensed through the Kentucky HVAC licensing board who maintain required liability insurance.</p>"
+      },
+      {
+        "question": "Do you know about rebates or tax credits?",
+        "answer": "<p>Your contractor can advise on current federal tax credits and any local incentives available for qualifying high-efficiency upgrades.</p>"
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "They connected us with a reliable tech in minutes. Our Newport rental had heat again before nightfall.",
+        "attribution": "Property Manager",
+        "role": "Newport, KY"
+      },
+      {
+        "quote": "Fast match and transparent pricing. Our Bellevue home's AC was back online the same afternoon.",
+        "attribution": "Homeowner",
+        "role": "Bellevue, KY"
+      }
+    ],
+    "seo_title": "Newport KY Emergency HVAC Repair | 24/7 Network of Licensed Pros",
+    "seo_description": "Emergency HVAC repair in Newport, Kentucky. Get matched 24/7 with a nearby, state-licensed pro for fast furnace and AC service across Northern Kentucky.",
+    "analytics": {
+      "enabled": true,
+      "provider": "plausible",
+      "script_url": "https://plausible.io/js/script.js"
+    },
+    "build_status": "pending"
   }
 ]
