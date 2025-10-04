@@ -27,13 +27,11 @@ export function Footer({ microsite }: FooterProps) {
               {phoneNumber}
             </a>
           )}
-          <p>Emails routed to {microsite.form_recipient_email}</p>
         </div>
       </div>
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-6 text-xs text-slate-500">
           <p>© {year} HVAC Repair Network. All rights reserved.</p>
-          <p>Built for rapid microsite deployment.</p>
         </div>
       </div>
     </footer>

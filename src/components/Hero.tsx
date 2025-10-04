@@ -34,25 +34,23 @@ export function Hero({ microsite }: HeroProps) {
                 </a>
               </Button>
             )}
-            {microsite.cta_blocks.map((cta) => (
-              <Button
-                key={cta.url}
-                asChild
-                size="lg"
-                variant={cta.style === "primary" ? "default" : "outline"}
-                className={
-                  cta.style === "primary"
-                    ? "bg-sky-400 text-white shadow-lg hover:bg-sky-300"
-                    : "border-white/80 text-white hover:bg-white/15"
-                }
-              >
-                <a href={cta.url}>{cta.label}</a>
-              </Button>
-            ))}
+            {microsite.cta_blocks
+              .filter((cta) => cta.label.toLowerCase().includes("book"))
+              .map((cta) => (
+                <Button
+                  key={cta.url}
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="border-white/80 text-white hover:bg-white/15"
+                >
+                  <a href="#contact-form">{cta.label}</a>
+                </Button>
+              ))}
           </div>
         </div>
         <div className="flex-1 rounded-3xl border border-white/15 bg-white/10 p-8 shadow-[0_30px_80px_rgba(6,17,38,0.45)] backdrop-blur">
-          <h2 className="text-xl font-semibold text-white drop-shadow">Why Cincinnati chooses us</h2>
+          <h2 className="text-xl font-semibold text-white drop-shadow">Why {microsite.city} chooses us</h2>
           <p className="mt-4 text-blue-50/95">{microsite.service_description}</p>
         </div>
       </div>
