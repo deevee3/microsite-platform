@@ -66,5 +66,73 @@
       "script_url": "https://plausible.io/js/script.js"
     },
     "build_status": "deployed"
+  },
+  {
+    "id": 2,
+    "domain": "glassrose.uk",
+    "vertical": "HVAC Repair",
+    "service_description": "Trusted Dayton HVAC repair technicians delivering rapid emergency service across Montgomery County neighborhoods.",
+    "city": "Dayton",
+    "state": "OH",
+    "hero_headline": "Emergency HVAC Repair in Dayton",
+    "hero_subheadline": "Local, certified techs restoring comfort across Dayton and the Miami Valley 24/7",
+    "service_features": [
+      {
+        "title": "24/7 Dispatch",
+        "description": "Crew on call for Kettering, Beavercreek, and greater Dayton emergency repairs.",
+        "icon": "clock"
+      },
+      {
+        "title": "Certified Diagnostics",
+        "description": "NATE-certified specialists for residential and light-commercial HVAC systems.",
+        "icon": "clipboard-check"
+      },
+      {
+        "title": "Upfront Estimates",
+        "description": "Transparent repair options with no surprise fees or overtime rates.",
+        "icon": "receipt"
+      }
+    ],
+    "primary_phone": "+1-937-555-0100",
+    "call_tracking_number": "+1-937-555-0200",
+    "form_recipient_email": "dvaughnhouse+dayton@gmail.com",
+    "form_recipient_name": "Dayton Lead Desk",
+    "cta_blocks": [
+      {
+        "label": "Call Now",
+        "url": "tel:+19375550100",
+        "style": "primary"
+      },
+      {
+        "label": "Request Service",
+        "url": "https://glassrose.uk/#contact-form",
+        "style": "secondary"
+      }
+    ],
+    "faq": [
+      {
+        "question": "Do you cover emergency HVAC repairs in the Dayton metro?",
+        "answer": "<p>Yes. We prioritize emergency calls across Dayton, Kettering, Beavercreek, and surrounding suburbs with rapid on-site response.</p>"
+      },
+      {
+        "question": "What HVAC systems do you service in Dayton?",
+        "answer": "<p>Our team services furnaces, heat pumps, mini-splits, and commercial rooftop units from brands like Trane, Carrier, Rheem, and Goodman.</p>"
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "They had our Riverside rental property heating again the same night—professional, efficient, and fair pricing.",
+        "attribution": "Property Manager",
+        "role": "Dayton, OH"
+      }
+    ],
+    "seo_title": "Dayton HVAC Repair | 24/7 Emergency Heating & Cooling",
+    "seo_description": "Need HVAC repair in Dayton? Book 24/7 emergency service from certified technicians serving the Miami Valley region.",
+    "analytics": {
+      "enabled": true,
+      "provider": "plausible",
+      "script_url": "https://plausible.io/js/script.js"
+    },
+    "build_status": "pending"
   }
 ]
