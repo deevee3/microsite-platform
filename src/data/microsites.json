@@ -25,14 +25,14 @@
         "icon": "wallet"
       }
     ],
-    "primary_phone": "+1-513-555-0100",
-    "call_tracking_number": "+1-513-555-0200",
+    "primary_phone": "+1-513-235-7523",
+    "call_tracking_number": "+1-513-235-7523",
     "form_recipient_email": "dvaughnhouse@gmail.com",
     "form_recipient_name": "Cincinnati Lead Desk",
     "cta_blocks": [
       {
         "label": "Call Now",
-        "url": "tel:+15135550100",
+        "url": "tel:+15132357523",
         "style": "primary"
       },
       {
@@ -93,14 +93,14 @@
         "icon": "receipt"
       }
     ],
-    "primary_phone": "+1-937-555-0100",
-    "call_tracking_number": "+1-937-555-0200",
-    "form_recipient_email": "dvaughnhouse+dayton@gmail.com",
+    "primary_phone": "+1-513-235-7523",
+    "call_tracking_number": "+1-513-235-7523",
+    "form_recipient_email": "dvaughnhouse@gmail.com",
     "form_recipient_name": "Dayton Lead Desk",
     "cta_blocks": [
       {
         "label": "Call Now",
-        "url": "tel:+19375550100",
+        "url": "tel:+15132357523",
         "style": "primary"
       },
       {
@@ -128,6 +128,74 @@
     ],
     "seo_title": "Dayton HVAC Repair | 24/7 Emergency Heating & Cooling",
     "seo_description": "Need HVAC repair in Dayton? Book 24/7 emergency service from certified technicians serving the Miami Valley region.",
+    "analytics": {
+      "enabled": true,
+      "provider": "plausible",
+      "script_url": "https://plausible.io/js/script.js"
+    },
+    "build_status": "pending"
+  },
+  {
+    "id": 3,
+    "domain": "hvacrepair-blue-ash-oh.com",
+    "vertical": "HVAC Repair",
+    "service_description": "Trusted Blue Ash HVAC repair specialists delivering rapid emergency service across the northeastern Cincinnati suburbs.",
+    "city": "Blue Ash",
+    "state": "OH",
+    "hero_headline": "Emergency HVAC Repair in Blue Ash",
+    "hero_subheadline": "Responsive, certified technicians serving Blue Ash, Sharonville, and Montgomery 24/7",
+    "service_features": [
+      {
+        "title": "Priority Dispatch",
+        "description": "Average on-site arrival within 90 minutes across Blue Ash and surrounding neighborhoods.",
+        "icon": "clock"
+      },
+      {
+        "title": "Certified Technicians",
+        "description": "NATE-certified HVAC experts prepared for residential and light-commercial systems.",
+        "icon": "badge-check"
+      },
+      {
+        "title": "Transparent Pricing",
+        "description": "Clear repair options with upfront estimates and no overtime surprises.",
+        "icon": "receipt"
+      }
+    ],
+    "primary_phone": "+1-513-235-7523",
+    "call_tracking_number": "+1-513-235-7523",
+    "form_recipient_email": "dvaughnhouse@gmail.com",
+    "form_recipient_name": "Blue Ash Lead Desk",
+    "cta_blocks": [
+      {
+        "label": "Call Now",
+        "url": "tel:+15132357523",
+        "style": "primary"
+      },
+      {
+        "label": "Request Service",
+        "url": "https://hvacrepair-blue-ash-oh.com/#contact-form",
+        "style": "secondary"
+      }
+    ],
+    "faq": [
+      {
+        "question": "Do you provide HVAC repair in Blue Ash and Sharonville?",
+        "answer": "<p>Yes. We dispatch emergency crews across Blue Ash, Sharonville, Montgomery, and the surrounding Cincinnati suburbs day or night.</p>"
+      },
+      {
+        "question": "What heating and cooling systems do you service?",
+        "answer": "<p>Our technicians service furnaces, heat pumps, mini-splits, and packaged rooftop units from leading brands including Trane, Carrier, Lennox, and Goodman.</p>"
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "They restored heating to our Blue Ash office the same afternoon—professional crew with clear communication.",
+        "attribution": "Operations Manager",
+        "role": "Blue Ash, OH"
+      }
+    ],
+    "seo_title": "Blue Ash HVAC Repair | 24/7 Emergency Heating & Cooling",
+    "seo_description": "Need HVAC repair in Blue Ash? Schedule 24/7 emergency service with certified technicians covering the northeastern Cincinnati suburbs.",
     "analytics": {
       "enabled": true,
       "provider": "plausible",
