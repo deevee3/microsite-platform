@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { hexToRgba } from "@/lib/color";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -28,6 +29,7 @@ interface LeadFormProps {
 export function LeadForm({ microsite }: LeadFormProps) {
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const accent = microsite.accent_color ?? "#0ea5e9";
 
   const {
     register,
@@ -103,14 +105,14 @@ export function LeadForm({ microsite }: LeadFormProps) {
                 {errors.phone && <p className="text-sm text-red-300">{errors.phone.message}</p>}
               </div>
             </div>
-
             <div className="space-y-2">
               <Label className="text-slate-200" htmlFor="service_need">
                 Service Needed *
               </Label>
               <select
                 id="service_need"
-                className="h-11 w-full rounded-md border border-white/25 bg-slate-800/80 px-3 text-base text-white shadow-inner transition focus:outline-none focus:ring-2 focus:ring-sky-400"
+                className="h-11 w-full rounded-md border bg-slate-800/80 px-3 text-base text-white shadow-inner transition focus:outline-none"
+                style={{ borderColor: hexToRgba(accent, 0.35) }}
                 defaultValue=""
                 {...register("service_need")}
               >
@@ -140,7 +142,13 @@ export function LeadForm({ microsite }: LeadFormProps) {
 
             <input type="text" aria-hidden tabIndex={-1} className="hidden" {...register("honeypot")} />
 
-            <Button type="submit" size="lg" disabled={isSubmitting} className="w-full bg-blue-500 text-white hover:bg-blue-400">
+            <Button
+              type="submit"
+              size="lg"
+              disabled={isSubmitting}
+              className="w-full text-white shadow-lg transition hover:brightness-110"
+              style={{ backgroundColor: accent }}
+            >
               {isSubmitting ? "Submitting…" : "Submit Request"}
             </Button>
 

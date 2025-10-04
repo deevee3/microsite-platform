@@ -1,6 +1,7 @@
 import { BadgeCheck, DollarSign, Truck, Wallet } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import type { Microsite } from "@/lib/types";
+import { hexToRgba } from "@/lib/color";
 
 const iconMap: Partial<Record<string, LucideIcon>> = {
   truck: Truck,
@@ -15,6 +16,7 @@ interface ServiceHighlightsProps {
 }
 
 export function ServiceHighlights({ microsite }: ServiceHighlightsProps) {
+  const accent = microsite.accent_color ?? "#0ea5e9";
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-6xl px-4 py-16">
@@ -28,9 +30,13 @@ export function ServiceHighlights({ microsite }: ServiceHighlightsProps) {
           {microsite.service_features.map((feature) => (
             <div
               key={feature.title}
-              className="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+              className="rounded-2xl border bg-slate-50 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+              style={{ borderColor: hexToRgba(accent, 0.25) }}
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-700">
+              <div
+                className="flex h-12 w-12 items-center justify-center rounded-full"
+                style={{ backgroundColor: hexToRgba(accent, 0.12), color: accent }}
+              >
                 {(() => {
                   const Icon = iconMap[feature.icon] ?? BadgeCheck;
                   return <Icon className="h-6 w-6" aria-hidden />;
