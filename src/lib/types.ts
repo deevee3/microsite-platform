@@ -43,6 +43,7 @@ export interface Microsite {
   call_tracking_number?: string;
   form_recipient_email: string;
   form_recipient_name?: string;
+  accent_color?: string;
   cta_blocks: CTABlock[];
   faq: FAQEntry[];
   testimonials: Testimonial[];

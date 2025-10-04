@@ -29,6 +29,7 @@
     "call_tracking_number": "+1-513-235-7523",
     "form_recipient_email": "dvaughnhouse@gmail.com",
     "form_recipient_name": "Cincinnati Lead Desk",
+    "accent_color": "#c53030",
     "cta_blocks": [
       {
         "label": "Call 24/7",
@@ -122,6 +123,7 @@
     "call_tracking_number": "+1-513-235-7523",
     "form_recipient_email": "dvaughnhouse@gmail.com",
     "form_recipient_name": "Dayton Lead Desk",
+    "accent_color": "#dd6b20",
     "cta_blocks": [
       {
         "label": "Call for 24/7 Match",
@@ -215,6 +217,7 @@
     "call_tracking_number": "+1-513-235-7523",
     "form_recipient_email": "dvaughnhouse@gmail.com",
     "form_recipient_name": "Blue Ash Lead Desk",
+    "accent_color": "#2f855a",
     "cta_blocks": [
       {
         "label": "Call Blue Ash 24/7",
@@ -304,6 +307,7 @@
     "call_tracking_number": "+1-513-235-7523",
     "form_recipient_email": "dvaughnhouse@gmail.com",
     "form_recipient_name": "Newport Lead Desk",
+    "accent_color": "#822727",
     "cta_blocks": [
       {
         "label": "Call Newport 24/7",
