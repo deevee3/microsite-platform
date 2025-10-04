@@ -9,6 +9,7 @@ interface HeroProps {
 export function Hero({ microsite }: HeroProps) {
   const phoneNumber = microsite.call_tracking_number ?? microsite.primary_phone;
   const formattedDial = phoneNumber?.replace(/[^0-9+]/g, "");
+  const secondaryCta = microsite.cta_blocks.find((cta) => cta.style !== "primary");
 
   return (
     <section className="bg-gradient-to-br from-[#00153a] via-[#021f57] to-[#061126] text-white">
@@ -34,19 +35,11 @@ export function Hero({ microsite }: HeroProps) {
                 </a>
               </Button>
             )}
-            {microsite.cta_blocks
-              .filter((cta) => cta.label.toLowerCase().includes("book"))
-              .map((cta) => (
-                <Button
-                  key={cta.url}
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="border-white/80 text-white hover:bg-white/15"
-                >
-                  <a href="#contact-form">{cta.label}</a>
-                </Button>
-              ))}
+            {secondaryCta && (
+              <Button asChild size="lg" variant="outline" className="border-white/80 text-white hover:bg-white/15">
+                <a href="#contact-form">{secondaryCta.label}</a>
+              </Button>
+            )}
           </div>
         </div>
         <div className="flex-1 rounded-3xl border border-white/15 bg-white/10 p-8 shadow-[0_30px_80px_rgba(6,17,38,0.45)] backdrop-blur">
