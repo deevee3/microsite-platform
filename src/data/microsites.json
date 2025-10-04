@@ -69,7 +69,7 @@
   },
   {
     "id": 2,
-    "domain": "glassrose.uk",
+    "domain": "hvacrepair-dayton-oh.com",
     "vertical": "HVAC Repair",
     "service_description": "Trusted Dayton HVAC repair technicians delivering rapid emergency service across Montgomery County neighborhoods.",
     "city": "Dayton",
@@ -105,7 +105,7 @@
       },
       {
         "label": "Request Service",
-        "url": "https://glassrose.uk/#contact-form",
+        "url": "https://hvacrepair-dayton-oh.com/#contact-form",
         "style": "secondary"
       }
     ],
