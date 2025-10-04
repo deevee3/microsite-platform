@@ -3,25 +3,25 @@
     "id": 1,
     "domain": "hvacrepair-cincinnati-oh.com",
     "vertical": "HVAC Repair",
-    "service_description": "When your furnace fails at 2 a.m. or your AC stops during a heatwave, our Cincinnati HVAC team moves fast. Licensed, insured technicians arrive with fully stocked trucks to deliver same-day repairs across Hamilton County—backed by clear pricing and great communication.",
+    "service_description": "Cincinnati’s 24/7 HVAC lead desk. We match your emergency with a nearby, state-licensed, insured HVAC professional for fast furnace, AC, and heat pump repairs—serving Downtown, Over-the-Rhine, Hyde Park, Oakley, Clifton, Westwood, Anderson Township, and more.",
     "city": "Cincinnati",
     "state": "OH",
-    "hero_headline": "24/7 Emergency HVAC Repair in Cincinnati",
-    "hero_subheadline": "Licensed local technicians restoring heat and AC—fast. Serving Cincinnati, Norwood, Hyde Park, Oakley, Clifton, Westwood, and more.",
+    "hero_headline": "Emergency HVAC Repair in Cincinnati",
+    "hero_subheadline": "A network of state-licensed HVAC professionals standing by 24/7 across Cincinnati and Hamilton County",
     "service_features": [
       {
-        "title": "Rapid Dispatch",
-        "description": "Priority scheduling for no-heat/no-cool calls with typical on-site arrival in under 2 hours across Greater Cincinnati.",
+        "title": "Live Intake & Fast Matching",
+        "description": "Call or book online—your request is routed to the nearest available pro for the fastest on-site arrival.",
         "icon": "truck"
       },
       {
-        "title": "Certified Experts",
-        "description": "EPA-certified technicians with deep experience in residential and light-commercial systems, including furnaces, heat pumps, central air, and mini‑splits.",
+        "title": "Licensed & Insured Pros",
+        "description": "We connect you with Ohio-licensed contractors who carry required liability coverage for HVAC work [1][3].",
         "icon": "badge-check"
       },
       {
-        "title": "Transparent Pricing",
-        "description": "Upfront diagnostic and clear repair options. Approve the work and your diagnostic fee is credited toward the repair.",
+        "title": "Upfront Options",
+        "description": "Your contractor provides clear diagnostics and repair options before work begins—no pressure, no surprises.",
         "icon": "wallet"
       }
     ],
@@ -36,31 +36,39 @@
         "style": "primary"
       },
       {
-        "label": "Book Same‑Day Service",
+        "label": "Request Emergency Service",
         "url": "https://hvacrepair-cincinnati-oh.com/#contact-form",
         "style": "secondary"
       }
     ],
     "faq": [
       {
+        "question": "Are you the HVAC contractor?",
+        "answer": "<p>No—we’re a referral service. We connect you with independent, state-licensed HVAC professionals from our network for emergency repairs and service.</p>"
+      },
+      {
         "question": "Do you provide emergency HVAC repair in Cincinnati?",
-        "answer": "<p>Yes. Our on-call team covers Cincinnati, Norwood, and surrounding neighborhoods with priority dispatch for no-heat and no-cool situations.</p>"
+        "answer": "<p>Yes. We route emergency calls across Cincinnati, Norwood, Hyde Park, Oakley, Clifton, Mt. Lookout, and surrounding neighborhoods 24/7.</p>"
       },
       {
-        "question": "How fast can you arrive?",
-        "answer": "<p>Emergency calls are prioritized. Our typical on-site arrival is under 2 hours within Greater Cincinnati, traffic and weather permitting.</p>"
+        "question": "How soon can a technician arrive?",
+        "answer": "<p>Arrival times depend on location, traffic, and availability. We prioritize no-heat and no-cool emergencies and match the nearest available pro.</p>"
       },
       {
-        "question": "What HVAC brands do you service?",
-        "answer": "<p>We service all major HVAC brands including Trane, Carrier, Lennox, Goodman, Rheem, and Daikin.</p>"
+        "question": "What HVAC brands do your network pros service?",
+        "answer": "<p>Most major brands are supported, including Trane, Carrier, Lennox, Goodman, Rheem, and Daikin—residential and light commercial.</p>"
       },
       {
-        "question": "Is the diagnostic fee applied to the repair?",
-        "answer": "<p>Yes. Approve the recommended repair and we credit the diagnostic fee toward the final invoice.</p>"
+        "question": "Are the technicians licensed and insured?",
+        "answer": "<p>Yes. We aim to connect you with OCILB-licensed contractors who meet Ohio’s insurance requirements for HVAC work [1][3].</p>"
       },
       {
-        "question": "Are rebates or tax credits available for Cincinnati HVAC upgrades?",
-        "answer": "<p>Utility rebates in our area have been limited in recent years, but federal tax credits may apply to qualifying high-efficiency equipment. Ask us for current guidance before you buy.</p>"
+        "question": "Are tax credits or rebates available?",
+        "answer": "<p>Federal tax credits may be available in 2025 for qualifying high-efficiency equipment. Your contractor can advise based on your home and system [2].</p>"
+      },
+      {
+        "question": "How does pricing work?",
+        "answer": "<p>Pricing, estimates, and warranties are provided by the independent contractor. You’ll review and approve before any work begins.</p>"
       }
     ],
     "testimonials": [
@@ -70,13 +78,13 @@
         "role": "Cincinnati, OH"
       },
       {
-        "quote": "Rapid response and no surprises on cost. Our Hyde Park home was warm again the same evening.",
+        "quote": "Matched us with a tech fast. Our Oakley home was warm again the same evening with clear pricing.",
         "attribution": "Homeowner",
         "role": "Cincinnati, OH"
       }
     ],
-    "seo_title": "Cincinnati Emergency HVAC Repair | 24/7 Heat & AC Service",
-    "seo_description": "24/7 emergency HVAC repair in Cincinnati. Licensed technicians, fast dispatch, and upfront pricing. Call now for same‑day furnace and AC service across Hamilton County.",
+    "seo_title": "Cincinnati Emergency HVAC Repair | 24/7 Network of Licensed Pros",
+    "seo_description": "Need emergency HVAC repair in Cincinnati? We connect you with nearby, state-licensed pros 24/7 for fast furnace and AC service. Upfront options, fast matching.",
     "analytics": {
       "enabled": true,
       "provider": "plausible",
@@ -88,25 +96,25 @@
     "id": 2,
     "domain": "hvacrepair-dayton-oh.com",
     "vertical": "HVAC Repair",
-    "service_description": "Dayton’s trusted emergency HVAC team—ready 24/7 with rapid dispatch across Montgomery County. Certified techs deliver precise diagnostics, straightforward options, and repairs done right the first time.",
+    "service_description": "Dayton’s 24/7 HVAC referral line. We connect you with a nearby, state-licensed technician for emergency furnace, AC, heat pump, or mini-split repairs across the Miami Valley—serving Kettering, Beavercreek, Centerville, Riverside, Huber Heights, and areas near WPAFB.",
     "city": "Dayton",
     "state": "OH",
-    "hero_headline": "24/7 Emergency HVAC Repair in Dayton",
-    "hero_subheadline": "Local, certified techs restoring comfort across Dayton, Kettering, Beavercreek, Centerville, and the Miami Valley—day or night.",
+    "hero_headline": "Emergency HVAC Repair in Dayton",
+    "hero_subheadline": "A network of local, state-licensed HVAC professionals on call 24/7 across the Miami Valley",
     "service_features": [
       {
-        "title": "24/7 Dispatch",
-        "description": "On-call crew for urgent furnace and AC breakdowns in Dayton, Kettering, Beavercreek, and surrounding suburbs.",
+        "title": "Rapid Match Across Dayton",
+        "description": "We route your request to the closest available pro for faster on-site response—day or night.",
         "icon": "clock"
       },
       {
-        "title": "Certified Diagnostics",
-        "description": "NATE-certified specialists using pro-grade testing for furnaces, heat pumps, mini‑splits, and rooftop units.",
+        "title": "Pro-Grade Expertise",
+        "description": "Many network technicians hold NATE certification and service furnaces, heat pumps, mini-splits, and rooftop units.",
         "icon": "clipboard-check"
       },
       {
-        "title": "Upfront Estimates",
-        "description": "Clear repair paths with no surprise fees or overtime rates—approve only the work you want.",
+        "title": "Clear Estimates from the Contractor",
+        "description": "Your contractor provides transparent options and pricing before work begins—no obligations.",
         "icon": "receipt"
       }
     ],
@@ -116,36 +124,44 @@
     "form_recipient_name": "Dayton Lead Desk",
     "cta_blocks": [
       {
-        "label": "Call 24/7",
+        "label": "Call for 24/7 Match",
         "url": "tel:+15132357523",
         "style": "primary"
       },
       {
-        "label": "Book Same‑Day Service",
+        "label": "Request Emergency Service",
         "url": "https://hvacrepair-dayton-oh.com/#contact-form",
         "style": "secondary"
       }
     ],
     "faq": [
       {
+        "question": "Are you the HVAC contractor or installer?",
+        "answer": "<p>No. We’re a lead generation service that connects you with independent, state-licensed HVAC professionals for emergency repairs and service.</p>"
+      },
+      {
         "question": "Do you cover emergency HVAC repairs in the Dayton metro?",
-        "answer": "<p>Yes. We prioritize emergency calls across Dayton, Kettering, Beavercreek, Centerville, Riverside, and nearby communities with rapid on-site response.</p>"
+        "answer": "<p>Yes. We prioritize calls across Dayton, Kettering, Beavercreek, Centerville, Riverside, Huber Heights, and nearby communities.</p>"
       },
       {
-        "question": "What HVAC systems do you service in Dayton?",
-        "answer": "<p>We service furnaces, heat pumps, mini‑splits, and commercial rooftop units from brands like Trane, Carrier, Rheem, Goodman, and Lennox.</p>"
+        "question": "How fast can someone arrive?",
+        "answer": "<p>We match you with the nearest available pro. Arrival times vary by location, traffic, weather, and demand—especially during peak heat or cold.</p>"
       },
       {
-        "question": "Do you charge overtime for nights or weekends?",
-        "answer": "<p>No surprise overtime fees. You’ll receive a clear estimate before work begins—24/7.</p>"
+        "question": "What systems and brands are supported?",
+        "answer": "<p>Furnaces, central AC, heat pumps, mini-splits, and light-commercial RTUs. Most major brands including Trane, Carrier, Rheem, Goodman, and Lennox.</p>"
       },
       {
-        "question": "How soon can you get here?",
-        "answer": "<p>Emergency calls are expedited. We dispatch the nearest available technician to minimize downtime—often same-day or faster.</p>"
+        "question": "Are technicians licensed and insured?",
+        "answer": "<p>We aim to connect you with OCILB-licensed contractors who meet Ohio’s minimum insurance standards for HVAC work [1][3].</p>"
       },
       {
-        "question": "Are rebates or tax credits available in Dayton?",
-        "answer": "<p>Local utility rebates have been limited in recent years. We can help you review current federal tax credits for qualifying high-efficiency equipment.</p>"
+        "question": "Any rebates or tax credits for upgrades?",
+        "answer": "<p>Ask about current federal tax credits for qualifying high-efficiency equipment in 2025; local utility rebates are limited in our region [2].</p>"
+      },
+      {
+        "question": "Who sets pricing and warranties?",
+        "answer": "<p>All pricing, warranties, and labor policies are set by the independent contractor you choose.</p>"
       }
     ],
     "testimonials": [
@@ -155,13 +171,13 @@
         "role": "Dayton, OH"
       },
       {
-        "quote": "Quick diagnosis and honest options. Our Centerville home’s heat pump is running perfectly.",
+        "quote": "Matched us quickly with a knowledgeable tech. Our Beavercreek heat pump is running perfectly.",
         "attribution": "Homeowner",
-        "role": "Centerville, OH"
+        "role": "Beavercreek, OH"
       }
     ],
-    "seo_title": "Dayton Emergency HVAC Repair | 24/7 Heat & AC Service",
-    "seo_description": "Need HVAC repair in Dayton now? Get 24/7 emergency service from certified technicians—fast dispatch, clear pricing, and same‑day fixes across the Miami Valley.",
+    "seo_title": "Dayton Emergency HVAC Repair | 24/7 Network of Licensed Pros",
+    "seo_description": "Emergency HVAC repair in Dayton, Kettering, and Beavercreek. Get matched 24/7 with a nearby, state-licensed pro for fast furnace and AC service.",
     "analytics": {
       "enabled": true,
       "provider": "plausible",
@@ -173,25 +189,25 @@
     "id": 3,
     "domain": "hvacrepair-blue-ash-oh.com",
     "vertical": "HVAC Repair",
-    "service_description": "Blue Ash’s rapid-response HVAC repair—serving Sharonville, Montgomery, Kenwood, and Sycamore Township. Certified techs, fast arrival, and transparent pricing for urgent heat and AC issues.",
+    "service_description": "Blue Ash’s rapid HVAC referral service. We connect you with nearby, state-licensed technicians for urgent furnace and AC repairs—serving Blue Ash, Sharonville, Montgomery, Kenwood, and Sycamore Township near Summit Park, Sharon Woods, and Kenwood Towne Centre.",
     "city": "Blue Ash",
     "state": "OH",
     "hero_headline": "Emergency HVAC Repair in Blue Ash",
-    "hero_subheadline": "Responsive, certified technicians serving Blue Ash, Sharonville, Montgomery, Kenwood, and nearby—24/7.",
+    "hero_subheadline": "A network of vetted, state-licensed HVAC professionals available 24/7 in Blue Ash and nearby suburbs",
     "service_features": [
       {
-        "title": "Priority Dispatch",
-        "description": "Average on-site arrival within 90 minutes across Blue Ash and surrounding neighborhoods for no-heat/no-cool calls.",
+        "title": "Priority Matching in Blue Ash",
+        "description": "We route your request to the closest available pro to reduce downtime for no-heat/no-cool emergencies.",
         "icon": "clock"
       },
       {
-        "title": "Certified Technicians",
-        "description": "NATE-certified HVAC experts prepared for residential and light-commercial systems—furnaces, heat pumps, mini‑splits, and RTUs.",
+        "title": "Home & Light-Commercial",
+        "description": "Many network pros service furnaces, heat pumps, mini-splits, and RTUs for homes, offices, and retail spaces.",
         "icon": "badge-check"
       },
       {
-        "title": "Transparent Pricing",
-        "description": "Clear repair options with upfront estimates—approve with confidence, no overtime surprises.",
+        "title": "Transparent Contractor Quotes",
+        "description": "Receive clear estimates and options directly from the contractor before any work begins.",
         "icon": "receipt"
       }
     ],
@@ -201,36 +217,40 @@
     "form_recipient_name": "Blue Ash Lead Desk",
     "cta_blocks": [
       {
-        "label": "Call 24/7",
+        "label": "Call Blue Ash 24/7",
         "url": "tel:+15132357523",
         "style": "primary"
       },
       {
-        "label": "Book Same‑Day Service",
+        "label": "Request Emergency Service",
         "url": "https://hvacrepair-blue-ash-oh.com/#contact-form",
         "style": "secondary"
       }
     ],
     "faq": [
       {
-        "question": "Do you provide HVAC repair in Blue Ash and Sharonville?",
-        "answer": "<p>Yes. We dispatch emergency crews across Blue Ash, Sharonville, Montgomery, Kenwood, and nearby suburbs—day or night.</p>"
+        "question": "Is this an HVAC company?",
+        "answer": "<p>No. We’re a referral service that connects you with independent, state-licensed HVAC professionals in our network.</p>"
       },
       {
-        "question": "What heating and cooling systems do you service?",
-        "answer": "<p>Our technicians service furnaces, heat pumps, mini‑splits, and packaged rooftop units from leading brands including Trane, Carrier, Lennox, Goodman, and Rheem.</p>"
+        "question": "Do you service Blue Ash, Sharonville, and Montgomery?",
+        "answer": "<p>Yes. We match jobs across Blue Ash, Sharonville, Montgomery, Kenwood, and Sycamore Township—24/7.</p>"
       },
       {
-        "question": "Do you carry common parts on the truck?",
-        "answer": "<p>Yes. We stock common igniters, capacitors, contactors, motors, and controls to complete most repairs on the first visit.</p>"
+        "question": "Do technicians carry common repair parts?",
+        "answer": "<p>Many contractors stock common components (igniters, capacitors, contactors, motors, controls) to complete most repairs on the first visit.</p>"
       },
       {
-        "question": "Are local rebates available for Blue Ash customers?",
-        "answer": "<p>Utility rebates in the Cincinnati area have been limited in recent years. Ask us about current federal incentives for qualifying high-efficiency upgrades.</p>"
+        "question": "Are your network pros licensed and insured?",
+        "answer": "<p>We strive to connect you with OCILB-licensed contractors who meet Ohio’s minimum liability insurance requirements [1][3].</p>"
       },
       {
-        "question": "What if I suspect a gas leak or carbon monoxide issue?",
-        "answer": "<p>Evacuate immediately and call your utility or 911. Once safe, we can inspect and repair your system.</p>"
+        "question": "What systems and brands are supported?",
+        "answer": "<p>Furnaces, central AC, heat pumps, mini-splits, and packaged rooftop units from leading brands including Trane, Carrier, Lennox, Goodman, and Rheem.</p>"
+      },
+      {
+        "question": "Do you know about rebates or tax credits?",
+        "answer": "<p>Ask about current federal tax credits for qualifying high-efficiency equipment in 2025; your contractor can help evaluate options [2].</p>"
       }
     ],
     "testimonials": [
@@ -240,13 +260,13 @@
         "role": "Blue Ash, OH"
       },
       {
-        "quote": "Fast, courteous, and transparent. Our Montgomery home was comfortable again the same day.",
+        "quote": "Quick match and fast arrival. Our Kenwood AC was cooling again before dinner.",
         "attribution": "Homeowner",
-        "role": "Montgomery, OH"
+        "role": "Kenwood, OH"
       }
     ],
-    "seo_title": "Blue Ash Emergency HVAC Repair | 24/7 Heat & AC Service",
-    "seo_description": "Need HVAC repair in Blue Ash now? Get 24/7 emergency service with certified technicians—fast arrival and upfront pricing across the northeastern Cincinnati suburbs.",
+    "seo_title": "Blue Ash Emergency HVAC Repair | 24/7 Network of Licensed Pros",
+    "seo_description": "24/7 HVAC repair in Blue Ash, Sharonville, and Montgomery. Get matched with a nearby, state-licensed pro for fast furnace and AC service.",
     "analytics": {
       "enabled": true,
       "provider": "plausible",
