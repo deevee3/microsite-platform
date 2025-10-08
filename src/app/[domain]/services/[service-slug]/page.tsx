@@ -14,14 +14,12 @@ interface ServicePageProps {
 export async function generateStaticParams() {
   const domains = await getAllMicrositeDomains();
   const params: { domain: string; "service-slug": string }[] = [];
-  
   for (const domain of domains) {
     const serviceSlugs = getAllServiceSlugs(domain);
     for (const slug of serviceSlugs) {
       params.push({ domain, "service-slug": slug });
     }
   }
-  
   return params;
 }
 
@@ -31,9 +29,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   const service = getServiceBySlug(domain, serviceSlug);
 
   if (!microsite || !service || !microsite.has_multipage) {
-    return {
-      title: "Page Not Found",
-    };
+    return { title: "Page Not Found" };
   }
 
   return {
@@ -64,26 +60,36 @@ export default async function ServicePage({ params }: ServicePageProps) {
   const phoneNumber = microsite.call_tracking_number ?? microsite.primary_phone;
   const accentColor = microsite.accent_color ?? "#0ea5e9";
 
-  // Generate Service schema.org markup
-  const serviceSchema = {
+  // Organization + Service schema (referral network)
+  const schema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": service.title,
-    "description": service.metaDescription,
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "HVAC Repair Network",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": microsite.city,
-        "addressRegion": microsite.state,
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `https://${microsite.domain}#org`,
+        "name": "HVAC Emergency Referral Network",
+        "url": `https://${microsite.domain}/services/${service.slug}`,
+        "description": "A 24/7 referral service that matches users with independent, state-licensed HVAC professionals. We are not a contractor.",
+        "areaServed": {
+          "@type": "City",
+          "name": microsite.city,
+          "addressRegion": microsite.state
+        },
+        "telephone": phoneNumber
       },
-      "telephone": phoneNumber,
-    },
-    "areaServed": {
-      "@type": "City",
-      "name": microsite.city,
-    },
+      {
+        "@type": "Service",
+        "name": service.title,
+        "serviceType": "HVAC referral and matching",
+        "description": service.metaDescription,
+        "provider": { "@id": `https://${microsite.domain}#org` },
+        "areaServed": {
+          "@type": "City",
+          "name": microsite.city,
+          "addressRegion": microsite.state
+        }
+      }
+    ]
   };
 
   return (
@@ -91,7 +97,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
       {/* Schema.org JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
       <div className="min-h-screen bg-slate-50">
@@ -111,7 +117,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
               {service.h1}
             </h1>
             <p className="text-xl text-slate-600">
-              Professional {service.title} in {microsite.city}, {microsite.state}
+              Get matched with a nearby, state-licensed HVAC professional for {service.title.toLowerCase()} in {microsite.city}, {microsite.state}. We are not a contractor.
             </p>
           </div>
         </div>
@@ -125,12 +131,15 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 {/* Service Description */}
                 <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
                   <div className="prose prose-slate max-w-none">
-                    {service.content.split('\n\n').map((paragraph, index) => (
+                    {service.content.split("\n\n").map((paragraph, index) => (
                       <p key={index} className="text-lg text-slate-700 mb-4">
                         {paragraph}
                       </p>
                     ))}
                   </div>
+                  <p className="text-sm text-slate-500 mt-4">
+                    Work is performed by independent contractors. Availability and arrival times vary by demand, traffic, and weather. Contractors provide estimates and warranties directly.
+                  </p>
                 </div>
 
                 {/* CTA Section */}
@@ -139,7 +148,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     {service.ctaText}
                   </h2>
                   <p className="text-slate-700 mb-6">
-                    Contact us today for expert {service.title.toLowerCase()} service
+                    Get matched now with a licensed HVAC professional for {service.title.toLowerCase()}.
                   </p>
                   {phoneNumber && (
                     <a
@@ -186,40 +195,46 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     Request Service
                   </h3>
                   <p className="text-sm text-slate-600 mb-6">
-                    Fill out the form and we&apos;ll get back to you promptly
+                    Fill out the form and we'll route your request to an independent, state-licensed HVAC professional.
                   </p>
                   <LeadForm microsite={microsite} />
+                  <p className="text-xs text-slate-500 mt-3">
+                    By submitting, you agree we may share your information with one or more independent contractors to facilitate service, and that we and/or matched contractors may contact you by phone, SMS, or email. Message and data rates may apply.
+                  </p>
                 </div>
 
                 {/* Quick Info */}
                 <div className="bg-slate-100 rounded-lg p-6">
                   <h3 className="text-lg font-bold text-slate-900 mb-4">
-                    Why Choose Us?
+                    Why Use Our Network?
                   </h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2">
                       <span style={{ color: accentColor }}>✓</span>
-                      <span className="text-sm text-slate-700">24/7 Emergency Service</span>
+                      <span className="text-sm text-slate-700">24/7 emergency matching</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span style={{ color: accentColor }}>✓</span>
-                      <span className="text-sm text-slate-700">Licensed & Insured</span>
+                      <span className="text-sm text-slate-700">State-licensed, insured HVAC pros</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span style={{ color: accentColor }}>✓</span>
-                      <span className="text-sm text-slate-700">Upfront Pricing</span>
+                      <span className="text-sm text-slate-700">Estimates and options provided by the contractor</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span style={{ color: accentColor }}>✓</span>
-                      <span className="text-sm text-slate-700">Satisfaction Guaranteed</span>
+                      <span className="text-sm text-slate-700">Residential and light-commercial support</span>
                     </li>
                   </ul>
+                  <p className="text-xs text-slate-500 mt-3">
+                    We are a referral service and do not perform repairs.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div> 
     </>
   );
 }
