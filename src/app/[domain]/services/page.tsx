@@ -20,13 +20,12 @@ export async function generateMetadata({ params }: ServicesPageProps): Promise<M
   const microsite = await getMicrositeByDomain(domain);
 
   if (!microsite || !microsite.has_multipage) {
-    return {
-      title: "Page Not Found",
-    };
+    return { title: "Page Not Found" };
   }
 
-  const title = `HVAC Services | HVAC Repair Network | ${microsite.city}, ${microsite.state}`;
-  const description = `Comprehensive HVAC services in ${microsite.city}, ${microsite.state}. Furnace repair, AC installation, duct cleaning, and more. Call ${microsite.call_tracking_number ?? microsite.primary_phone} today.`;
+  const phone = microsite.call_tracking_number ?? microsite.primary_phone;
+  const title = `Emergency HVAC Services We Match | ${microsite.city}, ${microsite.state}`;
+  const description = `24/7 referral service in ${microsite.city}, ${microsite.state}. We match you with nearby, state-licensed HVAC pros for furnace, AC, heat pump, and mini-split emergencies. Call ${phone}. We are not a contractor.`;
 
   return {
     title,
@@ -69,10 +68,10 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
       <div className="bg-white border-b border-slate-200">
         <div className="container mx-auto px-4 py-8 md:py-12">
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Our HVAC Services
+            Emergency HVAC Services We Match
           </h1>
           <p className="text-xl text-slate-600">
-            Professional Heating & Cooling Solutions in {microsite.city}, {microsite.state}
+            Get matched with a nearby, state-licensed HVAC professional in {microsite.city}, {microsite.state}. We are not a contractor.
           </p>
         </div>
       </div>
@@ -83,10 +82,10 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
           {/* Introduction */}
           <div className="mb-12 text-center max-w-3xl mx-auto">
             <p className="text-lg text-slate-700 mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+              Tell us what's wrong—no-heat, no-cool, leaks, strange noises, or system alerts—and we'll route your request to the closest available pro in our network. Arrival times vary by demand, traffic, and weather.
             </p>
             <p className="text-slate-600">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Contractors provide diagnostics, options, and pricing before work begins. You approve directly with the contractor.
             </p>
           </div>
 
@@ -96,7 +95,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
               {services.map((service) => (
                 <Link
                   key={service.slug}
-                  href={`/${microsite.domain}/services/${service.slug}`}
+                  href={`/services/${service.slug}`}
                   className="group bg-white rounded-lg shadow-sm hover:shadow-md transition-all p-6 border border-slate-200 hover:border-slate-300"
                 >
                   <div className="flex items-start justify-between gap-4">
@@ -105,7 +104,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
                         {service.title}
                       </h2>
                       <p className="text-slate-700 mb-4 line-clamp-3">
-                        {service.content.split('\n\n')[0]}
+                        {service.content.split("\n\n")[0]}
                       </p>
                       <div
                         className="inline-flex items-center gap-2 font-semibold group-hover:gap-3 transition-all"
@@ -128,10 +127,10 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
           {/* CTA Section */}
           <div className="bg-white rounded-lg shadow-md p-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-              Need HVAC Service Today?
+              Need HVAC Help Now?
             </h2>
             <p className="text-lg text-slate-700 mb-6">
-              Our expert technicians are ready to help with all your heating and cooling needs
+              Get matched with a nearby, licensed HVAC professional. 24/7 intake and emergency routing.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               {phoneNumber && (
@@ -146,13 +145,16 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
                 </a>
               )}
               <Link
-                href={`/${microsite.domain}/contact`}
+                href={`/contact`}
                 className="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold bg-slate-100 text-slate-900 rounded-lg hover:bg-slate-200 transition-all"
               >
                 Request Service Online
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </div>
+            <p className="text-xs text-slate-500 mt-4">
+              We are a referral service and do not perform repairs. Contractors set pricing, schedules, and warranties.
+            </p>
           </div>
 
           {/* Service Areas Link */}
@@ -161,7 +163,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
               Serving {microsite.city} and surrounding areas
             </p>
             <Link
-              href={`/${microsite.domain}/service-area`}
+              href={`/service-area`}
               className="text-lg font-semibold hover:underline"
               style={{ color: accentColor }}
             >
