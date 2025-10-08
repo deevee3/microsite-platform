@@ -1,4 +1,4 @@
-import { Phone, MapPin, Clock, Mail } from "lucide-react";
+import { Phone, MapPin, Clock } from "lucide-react";
 import type { Microsite } from "@/lib/types";
 import { hexToRgba } from "@/lib/color";
 

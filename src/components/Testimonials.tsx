@@ -73,7 +73,7 @@ export function Testimonials({ microsite }: TestimonialsProps) {
 
               {/* Quote Text */}
               <p className="relative text-lg leading-relaxed text-slate-700">
-                "{testimonial.quote}"
+                &ldquo;{testimonial.quote}&rdquo;
               </p>
 
               {/* Attribution */}

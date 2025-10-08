@@ -23,7 +23,7 @@ const ctaUrlSchema = z
     try {
       const parsed = new URL(value);
       return CTA_PROTOCOLS.has(parsed.protocol);
-    } catch (error) {
+    } catch {
       return false;
     }
   }, "CTA URL must be http(s), tel:, mailto:, anchor, or relative link");
