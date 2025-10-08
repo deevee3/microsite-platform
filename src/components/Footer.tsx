@@ -1,6 +1,8 @@
+import Link from "next/link";
 import { Phone, MapPin, Clock } from "lucide-react";
 import type { Microsite } from "@/lib/types";
 import { hexToRgba } from "@/lib/color";
+import { getFooterNavigationItems } from "@/lib/navigation-data";
 
 interface FooterProps {
   microsite: Microsite;
@@ -11,6 +13,7 @@ export function Footer({ microsite }: FooterProps) {
   const phoneNumber = microsite.call_tracking_number ?? microsite.primary_phone;
   const formattedDial = phoneNumber?.replace(/[^0-9+]/g, "");
   const accent = microsite.accent_color ?? "#0ea5e9";
+  const footerNav = getFooterNavigationItems(microsite.domain, microsite.has_multipage);
 
   return (
     <footer className="relative overflow-hidden bg-slate-950 text-slate-100">
@@ -21,7 +24,7 @@ export function Footer({ microsite }: FooterProps) {
       <div className="relative">
         {/* Main Footer Content */}
         <div className="mx-auto max-w-7xl px-4 py-16">
-          <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
+          <div className={`grid gap-12 md:grid-cols-2 ${footerNav ? 'lg:grid-cols-4' : 'lg:grid-cols-3'}`}>
             {/* Company Info */}
             <div className="space-y-6">
               <div>
@@ -81,35 +84,68 @@ export function Footer({ microsite }: FooterProps) {
             </div>
 
             {/* Quick Links */}
-            <div className="space-y-6">
-              <h4 className="text-lg font-semibold text-white">Quick Links</h4>
-              <nav className="space-y-3">
-                <a 
-                  href="#contact-form" 
-                  className="block text-slate-300 transition-colors hover:text-white"
-                >
-                  Request Service
-                </a>
-                <a 
-                  href="#services" 
-                  className="block text-slate-300 transition-colors hover:text-white"
-                >
-                  Our Services
-                </a>
-                <a 
-                  href="#testimonials" 
-                  className="block text-slate-300 transition-colors hover:text-white"
-                >
-                  Customer Reviews
-                </a>
-                <a 
-                  href="#faq" 
-                  className="block text-slate-300 transition-colors hover:text-white"
-                >
-                  FAQ
-                </a>
-              </nav>
-            </div>
+            {footerNav ? (
+              <>
+                <div className="space-y-6">
+                  <h4 className="text-lg font-semibold text-white">Quick Links</h4>
+                  <nav className="space-y-3">
+                    {footerNav.quickLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className="block text-slate-300 transition-colors hover:text-white"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </nav>
+                </div>
+                <div className="space-y-6">
+                  <h4 className="text-lg font-semibold text-white">Services</h4>
+                  <nav className="space-y-3">
+                    {footerNav.services.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className="block text-slate-300 transition-colors hover:text-white"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </nav>
+                </div>
+              </>
+            ) : (
+              <div className="space-y-6">
+                <h4 className="text-lg font-semibold text-white">Quick Links</h4>
+                <nav className="space-y-3">
+                  <a 
+                    href="#contact-form" 
+                    className="block text-slate-300 transition-colors hover:text-white"
+                  >
+                    Request Service
+                  </a>
+                  <a 
+                    href="#services" 
+                    className="block text-slate-300 transition-colors hover:text-white"
+                  >
+                    Our Services
+                  </a>
+                  <a 
+                    href="#testimonials" 
+                    className="block text-slate-300 transition-colors hover:text-white"
+                  >
+                    Customer Reviews
+                  </a>
+                  <a 
+                    href="#faq" 
+                    className="block text-slate-300 transition-colors hover:text-white"
+                  >
+                    FAQ
+                  </a>
+                </nav>
+              </div>
+            )}
           </div>
         </div>
 
@@ -121,12 +157,28 @@ export function Footer({ microsite }: FooterProps) {
           <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 text-sm text-slate-400 md:flex-row">
             <p>© {year} HVAC Repair Network. All rights reserved.</p>
             <div className="flex gap-6">
-              <a href="#" className="transition-colors hover:text-slate-200">
-                Privacy Policy
-              </a>
-              <a href="#" className="transition-colors hover:text-slate-200">
-                Terms of Service
-              </a>
+              {footerNav ? (
+                <>
+                  {footerNav.legal.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="transition-colors hover:text-slate-200"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </>
+              ) : (
+                <>
+                  <a href="#" className="transition-colors hover:text-slate-200">
+                    Privacy Policy
+                  </a>
+                  <a href="#" className="transition-colors hover:text-slate-200">
+                    Terms of Service
+                  </a>
+                </>
+              )}
             </div>
           </div>
         </div>
