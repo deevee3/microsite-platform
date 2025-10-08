@@ -72,6 +72,8 @@ export const micrositeSchema = z.object({
   seo_description: z.string().optional(),
   analytics: analyticsConfigSchema.optional(),
   build_status: z.enum(["pending", "building", "deployed", "error"]),
+  has_multipage: z.boolean().optional(),
+  accent_color: z.string().optional(),
 });
 
 export const micrositeCollectionSchema = z.array(micrositeSchema).min(1);

@@ -24,11 +24,20 @@ export function Navigation({ microsite }: NavigationProps) {
     return null;
   }
 
-  const isActivePath = (href: string) => {
+  // Helper to build domain-aware paths
+  const buildPath = (href: string) => {
     if (href === "/") {
-      return pathname === "/";
+      return `/${microsite.domain}`;
     }
-    return pathname.startsWith(href);
+    return `/${microsite.domain}${href}`;
+  };
+
+  const isActivePath = (href: string) => {
+    const fullPath = buildPath(href);
+    if (href === "/") {
+      return pathname === `/${microsite.domain}` || pathname === `/${microsite.domain}/`;
+    }
+    return pathname.startsWith(fullPath);
   };
 
   return (
@@ -36,7 +45,7 @@ export function Navigation({ microsite }: NavigationProps) {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo / Brand */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href={buildPath("/")} className="flex items-center gap-2">
             <span className="text-xl font-bold text-slate-900">
               HVAC Repair Network
             </span>
@@ -64,7 +73,7 @@ export function Navigation({ microsite }: NavigationProps) {
                       {item.children.map((child) => (
                         <Link
                           key={child.href}
-                          href={child.href}
+                          href={buildPath(child.href)}
                           className={`block px-4 py-2 text-sm transition-colors ${
                             isActivePath(child.href)
                               ? "text-slate-900 bg-slate-50 font-medium"
@@ -79,7 +88,7 @@ export function Navigation({ microsite }: NavigationProps) {
                 ) : (
                   // Regular link
                   <Link
-                    href={item.href}
+                    href={buildPath(item.href)}
                     className={`block px-4 py-2 text-sm font-medium rounded-md transition-colors ${
                       isActivePath(item.href)
                         ? "text-slate-900 bg-slate-100"
@@ -132,7 +141,7 @@ export function Navigation({ microsite }: NavigationProps) {
                   // Parent with children
                   <div className="space-y-1">
                     <Link
-                      href={item.href}
+                      href={buildPath(item.href)}
                       onClick={() => setMobileMenuOpen(false)}
                       className={`block px-4 py-2 text-base font-medium rounded-md transition-colors ${
                         isActivePath(item.href)
@@ -146,7 +155,7 @@ export function Navigation({ microsite }: NavigationProps) {
                       {item.children.map((child) => (
                         <Link
                           key={child.href}
-                          href={child.href}
+                          href={buildPath(child.href)}
                           onClick={() => setMobileMenuOpen(false)}
                           className={`block px-4 py-2 text-sm rounded-md transition-colors ${
                             isActivePath(child.href)
@@ -162,7 +171,7 @@ export function Navigation({ microsite }: NavigationProps) {
                 ) : (
                   // Regular link
                   <Link
-                    href={item.href}
+                    href={buildPath(item.href)}
                     onClick={() => setMobileMenuOpen(false)}
                     className={`block px-4 py-2 text-base font-medium rounded-md transition-colors ${
                       isActivePath(item.href)
