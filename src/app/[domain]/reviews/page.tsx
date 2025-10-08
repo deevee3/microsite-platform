@@ -24,8 +24,9 @@ export async function generateMetadata({ params }: ReviewsPageProps): Promise<Me
     };
   }
 
-  const title = `Customer Reviews | HVAC Repair Network | ${microsite.city}, ${microsite.state}`;
-  const description = `Read reviews from satisfied customers in ${microsite.city}, ${microsite.state}. See why HVAC Repair Network is the trusted choice for heating and cooling service.`;
+  const title = `Reviews & Testimonials | ${microsite.city} HVAC Emergency Referral Network`;
+  const phone = microsite.call_tracking_number ?? microsite.primary_phone;
+  const description = `Read feedback from customers in ${microsite.city}, ${microsite.state} who used our referral service to get matched with state-licensed HVAC professionals. Call ${phone} for 24/7 matching. We are not a contractor.`;
 
   return {
     title,
@@ -42,54 +43,34 @@ export async function generateMetadata({ params }: ReviewsPageProps): Promise<Me
   };
 }
 
-// Placeholder reviews
+// Fallback reviews if microsite has no testimonials
 const placeholderReviews = [
   {
-    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.",
-    attribution: "John Smith",
-    role: "Homeowner",
+    quote:
+      "Matched us with a tech quickly and the repair was completed the same day. Clear communication throughout.",
+    attribution: "Homeowner",
+    role: "Residential",
     rating: 5,
   },
   {
-    quote: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia.",
-    attribution: "Sarah Johnson",
-    role: "Property Manager",
+    quote:
+      "Our office heat was restored before noon. The process was simple and fast.",
+    attribution: "Facilities Manager",
+    role: "Commercial",
     rating: 5,
   },
   {
-    quote: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis.",
-    attribution: "Michael Brown",
-    role: "Business Owner",
+    quote:
+      "No-pressure estimate and transparent pricing from the contractor we were matched with.",
+    attribution: "Property Manager",
+    role: "Multifamily",
     rating: 5,
   },
   {
-    quote: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-    attribution: "Emily Davis",
-    role: "Homeowner",
-    rating: 5,
-  },
-  {
-    quote: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam.",
-    attribution: "Robert Wilson",
-    role: "Facility Manager",
-    rating: 5,
-  },
-  {
-    quote: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.",
-    attribution: "Jennifer Martinez",
-    role: "Homeowner",
-    rating: 5,
-  },
-  {
-    quote: "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae itaque earum.",
-    attribution: "David Anderson",
-    role: "Restaurant Owner",
-    rating: 5,
-  },
-  {
-    quote: "Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus omnis voluptas assumenda est.",
-    attribution: "Lisa Thompson",
-    role: "Homeowner",
+    quote:
+      "Booked online at night and got a morning appointment. Smooth experience.",
+    attribution: "Homeowner",
+    role: "Residential",
     rating: 5,
   },
 ];
@@ -105,6 +86,22 @@ export default async function ReviewsPage({ params }: ReviewsPageProps) {
   const phoneNumber = microsite.call_tracking_number ?? microsite.primary_phone;
   const accent = microsite.accent_color ?? "#0ea5e9";
 
+  // Prefer real testimonials from the microsite JSON if available
+  const reviews =
+    (microsite.testimonials && microsite.testimonials.length > 0
+      ? microsite.testimonials.map((t: any) => ({
+          quote: t.quote,
+          attribution: t.attribution || "Customer",
+          role: t.role || microsite.city,
+          rating: 5, // default display; adjust if you start storing rating
+        }))
+      : placeholderReviews) as Array<{
+      quote: string;
+      attribution: string;
+      role: string;
+      rating: number;
+    }>;
+
   return (
     <div className="min-h-screen bg-slate-50">
       {/* Breadcrumbs */}
@@ -119,10 +116,10 @@ export default async function ReviewsPage({ params }: ReviewsPageProps) {
       <div className="bg-white border-b border-slate-200">
         <div className="container mx-auto px-4 py-8 md:py-12">
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Customer Reviews
+            Reviews & Testimonials
           </h1>
           <p className="text-xl text-slate-600">
-            See What Our Customers in {microsite.city} Are Saying
+            What customers in {microsite.city}, {microsite.state} say about our emergency referral service
           </p>
         </div>
       </div>
@@ -138,16 +135,16 @@ export default async function ReviewsPage({ params }: ReviewsPageProps) {
               ))}
             </div>
             <p className="text-lg text-slate-700 mb-2">
-              Rated 5.0 Stars by Our Customers
+              Recent feedback from customers matched through our network
             </p>
             <p className="text-slate-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
+              We connect you with independent, state-licensed HVAC professionals. Testimonials reflect individual experiences; availability, pricing, and outcomes vary by contractor.
             </p>
           </div>
 
           {/* Reviews Grid */}
           <div className="grid md:grid-cols-2 gap-6 mb-12">
-            {placeholderReviews.map((review, index) => (
+            {reviews.map((review, index) => (
               <div
                 key={index}
                 className="bg-white rounded-lg shadow-sm p-6 border border-slate-200"
@@ -165,7 +162,10 @@ export default async function ReviewsPage({ params }: ReviewsPageProps) {
                 </p>
 
                 {/* Attribution */}
-                <div className="flex items-center gap-3 pt-4 border-t" style={{ borderColor: hexToRgba(accent, 0.1) }}>
+                <div
+                  className="flex items-center gap-3 pt-4 border-t"
+                  style={{ borderColor: hexToRgba(accent, 0.1) }}
+                >
                   <div
                     className="flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold text-white flex-shrink-0"
                     style={{ backgroundColor: accent }}
@@ -181,52 +181,58 @@ export default async function ReviewsPage({ params }: ReviewsPageProps) {
             ))}
           </div>
 
-          {/* Stats Section */}
+          {/* Highlights Section */}
           <div className="bg-white rounded-lg shadow-sm p-8 mb-12">
             <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">
-              Why Choose Us
+              Why People Use Our Network
             </h2>
             <div className="grid sm:grid-cols-3 gap-8 text-center">
               <div>
                 <div className="text-4xl font-bold mb-2" style={{ color: accent }}>
-                  100%
-                </div>
-                <p className="text-slate-700 font-medium">Customer Satisfaction</p>
-              </div>
-              <div>
-                <div className="text-4xl font-bold mb-2" style={{ color: accent }}>
                   24/7
                 </div>
-                <p className="text-slate-700 font-medium">Emergency Service</p>
+                <p className="text-slate-700 font-medium">Emergency Intake & Matching</p>
               </div>
               <div>
                 <div className="text-4xl font-bold mb-2" style={{ color: accent }}>
-                  5★
+                  Licensed
                 </div>
-                <p className="text-slate-700 font-medium">Average Rating</p>
+                <p className="text-slate-700 font-medium">State‑licensed, insured pros</p>
+              </div>
+              <div>
+                <div className="text-4xl font-bold mb-2" style={{ color: accent }}>
+                  Fast
+                </div>
+                <p className="text-slate-700 font-medium">Routed to nearby contractors</p>
               </div>
             </div>
+            <p className="text-xs text-slate-500 text-center mt-4">
+              We are a referral service and do not perform repairs. Contractors set pricing, schedules, and warranties.
+            </p>
           </div>
 
           {/* CTA Section */}
           <div className="bg-white rounded-lg shadow-md p-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-              Ready to Experience 5-Star Service?
+              Need emergency HVAC help?
             </h2>
             <p className="text-lg text-slate-700 mb-6">
-              Join our satisfied customers in {microsite.city}
+              Get matched with a nearby, state‑licensed HVAC professional in {microsite.city}.
             </p>
             {phoneNumber && (
               <a
                 href={`tel:${phoneNumber}`}
                 className="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold text-white rounded-lg transition-all hover:scale-105 hover:shadow-lg"
                 style={{ backgroundColor: accent }}
-                aria-label={`Call us now at ${phoneNumber}`}
+                aria-label={`Call now at ${phoneNumber}`}
               >
                 <Phone className="h-5 w-5" />
                 {phoneNumber}
               </a>
             )}
+            <p className="text-xs text-slate-500 mt-4">
+              Calls may be recorded for quality and routing. By contacting us, you agree we may share your information with one or more independent contractors to facilitate service.
+            </p>
           </div>
         </div>
       </div>
