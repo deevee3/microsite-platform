@@ -164,7 +164,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                       {relatedServices.map((relatedService) => (
                         <Link
                           key={relatedService.slug}
-                          href={`/services/${relatedService.slug}`}
+                          href={`/${microsite.domain}/services/${relatedService.slug}`}
                           className="group flex items-center justify-between p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors"
                         >
                           <span className="font-semibold text-slate-900 group-hover:underline">

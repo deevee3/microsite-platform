@@ -198,7 +198,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                       {nearbyLocations.map((nearbyLocation) => (
                         <Link
                           key={nearbyLocation.slug}
-                          href={`/locations/${nearbyLocation.slug}`}
+                          href={`/${microsite.domain}/locations/${nearbyLocation.slug}`}
                           className="group flex items-center gap-3 p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors"
                         >
                           <MapPin className="h-5 w-5 flex-shrink-0" style={{ color: accentColor }} />

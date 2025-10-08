@@ -100,7 +100,7 @@ export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) 
                 {locations.map((location) => (
                   <Link
                     key={location.slug}
-                    href={`/locations/${location.slug}`}
+                    href={`/${microsite.domain}/locations/${location.slug}`}
                     className="group bg-white rounded-lg shadow-sm hover:shadow-md transition-all p-4 border border-slate-200 hover:border-slate-300"
                   >
                     <div className="flex items-center gap-3">

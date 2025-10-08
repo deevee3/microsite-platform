@@ -96,7 +96,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
               {services.map((service) => (
                 <Link
                   key={service.slug}
-                  href={`/services/${service.slug}`}
+                  href={`/${microsite.domain}/services/${service.slug}`}
                   className="group bg-white rounded-lg shadow-sm hover:shadow-md transition-all p-6 border border-slate-200 hover:border-slate-300"
                 >
                   <div className="flex items-start justify-between gap-4">
@@ -146,7 +146,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
                 </a>
               )}
               <Link
-                href="/contact"
+                href={`/${microsite.domain}/contact`}
                 className="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold bg-slate-100 text-slate-900 rounded-lg hover:bg-slate-200 transition-all"
               >
                 Request Service Online
@@ -161,7 +161,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
               Serving {microsite.city} and surrounding areas
             </p>
             <Link
-              href="/service-area"
+              href={`/${microsite.domain}/service-area`}
               className="text-lg font-semibold hover:underline"
               style={{ color: accentColor }}
             >
