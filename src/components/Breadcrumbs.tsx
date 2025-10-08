@@ -11,9 +11,28 @@ interface BreadcrumbsProps {
 }
 
 export function Breadcrumbs({ items }: BreadcrumbsProps) {
+  // Generate BreadcrumbList schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": items.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.label,
+      "item": item.href ? `${typeof window !== 'undefined' ? window.location.origin : ''}${item.href}` : undefined,
+    })),
+  };
+
   return (
-    <nav aria-label="Breadcrumb" className="container mx-auto px-4 py-4">
-      <ol className="flex items-center gap-2 text-sm">
+    <>
+      {/* Schema.org JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      
+      <nav aria-label="Breadcrumb" className="container mx-auto px-4 py-4">
+        <ol className="flex items-center gap-2 text-sm">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
           
@@ -40,5 +59,6 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
         })}
       </ol>
     </nav>
+    </>
   );
 }

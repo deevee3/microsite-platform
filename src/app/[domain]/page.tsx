@@ -55,8 +55,38 @@ export default async function MicrositePage({ params }: MicrositePageProps) {
     notFound();
   }
 
+  const phoneNumber = microsite.call_tracking_number ?? microsite.primary_phone;
+
+  // Organization schema for homepage
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "HVAC Repair Network",
+    "description": microsite.service_description,
+    "url": `https://${microsite.domain}`,
+    "telephone": phoneNumber,
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": microsite.city,
+      "addressRegion": microsite.state,
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": microsite.city,
+      "addressRegion": microsite.state,
+    },
+    "openingHours": "Mo-Su 00:00-23:59",
+  };
+
   return (
     <>
+      {/* Schema.org JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+
       <Hero microsite={microsite} />
       <ServiceHighlights microsite={microsite} />
       <Suspense fallback={<div className="py-16 text-center">Loading form…</div>}>
