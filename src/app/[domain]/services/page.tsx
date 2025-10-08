@@ -82,7 +82,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
           {/* Introduction */}
           <div className="mb-12 text-center max-w-3xl mx-auto">
             <p className="text-lg text-slate-700 mb-4">
-              Tell us what's wrong—no-heat, no-cool, leaks, strange noises, or system alerts—and we'll route your request to the closest available pro in our network. Arrival times vary by demand, traffic, and weather.
+              Tell us what&apos;s wrong—no-heat, no-cool, leaks, strange noises, or system alerts—and we&apos;ll route your request to the closest available pro in our network. Arrival times vary by demand, traffic, and weather.
             </p>
             <p className="text-slate-600">
               Contractors provide diagnostics, options, and pricing before work begins. You approve directly with the contractor.

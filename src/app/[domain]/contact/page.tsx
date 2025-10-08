@@ -86,7 +86,7 @@ export default async function ContactPage({ params }: ContactPageProps) {
                 Get In Touch
               </h2>
               <p className="text-lg text-slate-700 mb-8">
-                Tell us what's wrong—no-heat, no-cool, strange noises, leaks, or alerts—and we'll route your request to the closest available pro in our network. Arrival times vary by demand, traffic, and weather.
+                Tell us what&apos;s wrong—no-heat, no-cool, strange noises, leaks, or alerts—and we&apos;ll route your request to the closest available pro in our network. Arrival times vary by demand, traffic, and weather.
               </p>
 
               {/* Phone Number - Prominent */}
@@ -150,7 +150,6 @@ export default async function ContactPage({ params }: ContactPageProps) {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-slate-900 mb-2">
-                      Hours of Operation
                     </h3>
                     <p className="text-slate-700">
                       24/7 intake and emergency matching. Contractor availability and arrival times vary.
@@ -195,7 +194,7 @@ export default async function ContactPage({ params }: ContactPageProps) {
                   Request Service
                 </h2>
                 <p className="text-slate-700 mb-6">
-                  Fill out the form and we'll route your request to an independent, state-licensed HVAC professional. Availability varies by time and location.
+                  Fill out the form and we&apos;ll route your request to an independent, state-licensed HVAC professional. Availability varies by time and location.
                 </p>
                 <LeadForm microsite={microsite} />
                 <p className="text-xs text-slate-500 mt-4">

@@ -131,7 +131,7 @@ export default async function PrivacyPage({ params }: PrivacyPageProps) {
                 </li>
               </ul>
               <p className="text-slate-700">
-                We do not sell your personal information in the traditional sense. We share information to provide the referral service and for measurement/attribution. Depending on your jurisdiction, you may have the right to opt out of certain sharing—see "Your Choices & Rights."
+                We do not sell your personal information in the traditional sense. We share information to provide the referral service and for measurement/attribution. Depending on your jurisdiction, you may have the right to opt out of certain sharing—see &quot;Your Choices & Rights.&quot;
               </p>
             </section>
 
@@ -193,7 +193,7 @@ export default async function PrivacyPage({ params }: PrivacyPageProps) {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-slate-900 mb-4">Changes to This Policy</h2>
               <p className="text-slate-700 mb-4">
-                We may update this Privacy Policy from time to time. The "Last Updated" date above reflects the most recent changes. Your continued use of the website after changes indicates acceptance.
+                We may update this Privacy Policy from time to time. The &quot;Last Updated&quot; date above reflects the most recent changes. Your continued use of the website after changes indicates acceptance.
               </p>
             </section>
 

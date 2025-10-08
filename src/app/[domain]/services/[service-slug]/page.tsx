@@ -195,7 +195,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     Request Service
                   </h3>
                   <p className="text-sm text-slate-600 mb-6">
-                    Fill out the form and we'll route your request to an independent, state-licensed HVAC professional.
+                    Fill out the form and we&apos;ll route your request to an independent, state-licensed HVAC professional.
                   </p>
                   <LeadForm microsite={microsite} />
                   <p className="text-xs text-slate-500 mt-3">

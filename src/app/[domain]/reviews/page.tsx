@@ -87,9 +87,15 @@ export default async function ReviewsPage({ params }: ReviewsPageProps) {
   const accent = microsite.accent_color ?? "#0ea5e9";
 
   // Prefer real testimonials from the microsite JSON if available
+  interface Testimonial {
+    quote: string;
+    attribution?: string;
+    role?: string;
+  }
+  
   const reviews =
     (microsite.testimonials && microsite.testimonials.length > 0
-      ? microsite.testimonials.map((t: any) => ({
+      ? microsite.testimonials.map((t: Testimonial) => ({
           quote: t.quote,
           attribution: t.attribution || "Customer",
           role: t.role || microsite.city,

@@ -158,7 +158,7 @@ export default async function FAQPage({ params }: FAQPageProps) {
           {/* Intro */}
           <div className="mb-12">
             <p className="text-lg text-slate-700">
-              We're a referral service—not a contractor. We match your request with an independent, state-licensed HVAC
+              We&apos;re a referral service—not a contractor. We match your request with an independent, state-licensed HVAC
               professional who provides diagnostics and repair options. Availability and arrival times vary.
             </p>
           </div>

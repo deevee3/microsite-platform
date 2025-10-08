@@ -89,7 +89,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
               </p>
               <p className="text-lg text-slate-700 mb-4">
                 Our network includes technicians experienced with furnaces, central air, heat pumps, and mini‑splits. Whether
-                you're in a single-family home, condo, multi‑unit building, or a small office, our goal is the same: quick matching,
+                you&apos;re in a single-family home, condo, multi‑unit building, or a small office, our goal is the same: quick matching,
                 transparent communication, and reliable service from vetted professionals.
               </p>
               <p className="text-lg text-slate-700">
@@ -117,7 +117,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">How It Works</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white rounded-lg shadow-sm p-6">
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">1) Tell Us What's Wrong</h3>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">1) Tell Us What&apos;s Wrong</h3>
                 <p className="text-slate-700">
                   No‑heat, no‑cool, strange noises, leaks, or alerts—share symptoms and your location.
                 </p>
@@ -131,7 +131,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
               <div className="bg-white rounded-lg shadow-sm p-6">
                 <h3 className="text-xl font-semibold text-slate-900 mb-3">3) Confirm & Schedule</h3>
                 <p className="text-slate-700">
-                  You'll get a call or text to confirm timing. Availability varies by demand, traffic, and weather.
+                  You&apos;ll get a call or text to confirm timing. Availability varies by demand, traffic, and weather.
                 </p>
               </div>
               <div className="bg-white rounded-lg shadow-sm p-6">
@@ -205,7 +205,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
           <section className="bg-white rounded-lg shadow-sm p-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">Need Help Now?</h2>
             <p className="text-lg text-slate-700 mb-6">
-              Get matched with a nearby, state‑licensed HVAC professional in {microsite.city}. We're available 24/7.
+              Get matched with a nearby, state‑licensed HVAC professional in {microsite.city}. We&apos;re available 24/7.
             </p>
             {phoneNumber && (
               <a
