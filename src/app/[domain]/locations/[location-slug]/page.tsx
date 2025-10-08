@@ -14,14 +14,12 @@ interface LocationPageProps {
 export async function generateStaticParams() {
   const domains = await getAllMicrositeDomains();
   const params: { domain: string; "location-slug": string }[] = [];
-  
   for (const domain of domains) {
     const locationSlugs = getAllLocationSlugs(domain);
     for (const slug of locationSlugs) {
       params.push({ domain, "location-slug": slug });
     }
   }
-  
   return params;
 }
 
@@ -64,24 +62,36 @@ export default async function LocationPage({ params }: LocationPageProps) {
   const phoneNumber = microsite.call_tracking_number ?? microsite.primary_phone;
   const accentColor = microsite.accent_color ?? "#0ea5e9";
 
-  // Generate LocalBusiness schema.org markup
-  const localBusinessSchema = {
+  // Organization + Service schema (referral service)
+  const schema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": `HVAC Repair Network - ${location.cityName}`,
-    "description": location.metaDescription,
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": location.cityName,
-      "addressRegion": location.state,
-    },
-    "telephone": phoneNumber,
-    "areaServed": {
-      "@type": "City",
-      "name": location.cityName,
-      "addressRegion": location.state,
-    },
-    "priceRange": "$$",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `https://${microsite.domain}#org`,
+        "name": `HVAC Emergency Referral Network - ${location.cityName}`,
+        "url": `https://${microsite.domain}/locations/${location.slug}`,
+        "description": "A 24/7 referral service that connects users with independent, state-licensed HVAC professionals. We are not a contractor.",
+        "telephone": phoneNumber,
+        "areaServed": {
+          "@type": "City",
+          "name": location.cityName,
+          "addressRegion": location.state
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "Emergency HVAC Referral & Matching",
+        "serviceType": "HVAC emergency referral service",
+        "provider": { "@id": `https://${microsite.domain}#org` },
+        "areaServed": {
+          "@type": "City",
+          "name": location.cityName,
+          "addressRegion": location.state
+        },
+        "description": location.metaDescription
+      }
+    ]
   };
 
   return (
@@ -89,7 +99,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
       {/* Schema.org JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
       <div className="min-h-screen bg-slate-50">
@@ -112,7 +122,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
               </h1>
             </div>
             <p className="text-xl text-slate-600">
-              Professional HVAC Services in {location.cityName}, {location.state}
+              Emergency HVAC referral service in {location.cityName}, {location.state}. We match you with nearby, state-licensed professionals—24/7. We are not a contractor.
             </p>
           </div>
         </div>
@@ -134,37 +144,40 @@ export default async function LocationPage({ params }: LocationPageProps) {
                   </div>
                 </div>
 
-                {/* Services Offered */}
+                {/* Services Matched Here */}
                 <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
                   <h2 className="text-2xl font-bold text-slate-900 mb-6">
-                    Services We Offer in {location.cityName}
+                    Emergency HVAC Services We Match in {location.cityName}
                   </h2>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="flex items-start gap-2">
                       <span style={{ color: accentColor }}>✓</span>
-                      <span className="text-slate-700">Furnace Repair & Installation</span>
+                      <span className="text-slate-700">Furnace Repair & Diagnostics</span>
                     </div>
                     <div className="flex items-start gap-2">
                       <span style={{ color: accentColor }}>✓</span>
-                      <span className="text-slate-700">AC Repair & Installation</span>
+                      <span className="text-slate-700">AC Repair & Diagnostics</span>
                     </div>
                     <div className="flex items-start gap-2">
                       <span style={{ color: accentColor }}>✓</span>
-                      <span className="text-slate-700">Duct Cleaning</span>
+                      <span className="text-slate-700">Heat Pump & Mini-Split Repair</span>
                     </div>
                     <div className="flex items-start gap-2">
                       <span style={{ color: accentColor }}>✓</span>
-                      <span className="text-slate-700">Thermostat Replacement</span>
+                      <span className="text-slate-700">Thermostats & Controls</span>
                     </div>
                     <div className="flex items-start gap-2">
                       <span style={{ color: accentColor }}>✓</span>
-                      <span className="text-slate-700">Emergency HVAC Service</span>
+                      <span className="text-slate-700">Emergency HVAC Matching (24/7)</span>
                     </div>
                     <div className="flex items-start gap-2">
                       <span style={{ color: accentColor }}>✓</span>
-                      <span className="text-slate-700">Maintenance & Tune-ups</span>
+                      <span className="text-slate-700">Light-Commercial RTU Repairs</span>
                     </div>
                   </div>
+                  <p className="text-sm text-slate-500 mt-4">
+                    Work is performed by independent, state-licensed HVAC contractors. Availability and arrival times vary by demand, traffic, and weather.
+                  </p>
                 </div>
 
                 {/* CTA Section */}
@@ -173,14 +186,14 @@ export default async function LocationPage({ params }: LocationPageProps) {
                     {location.ctaText}
                   </h2>
                   <p className="text-slate-700 mb-6">
-                    Available 24/7 for emergency HVAC service in {location.cityName}
+                    24/7 emergency matching in {location.cityName}. We route your request to the closest available pro.
                   </p>
                   {phoneNumber && (
                     <a
                       href={`tel:${phoneNumber}`}
                       className="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold text-white rounded-lg transition-all hover:scale-105 hover:shadow-lg"
                       style={{ backgroundColor: accentColor }}
-                      aria-label={`Call us now at ${phoneNumber}`}
+                      aria-label={`Call now at ${phoneNumber}`}
                     >
                       <Phone className="h-5 w-5" />
                       {phoneNumber}
@@ -198,7 +211,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                       {nearbyLocations.map((nearbyLocation) => (
                         <Link
                           key={nearbyLocation.slug}
-                          href={`/${microsite.domain}/locations/${nearbyLocation.slug}`}
+                          href={`/locations/${nearbyLocation.slug}`}
                           className="group flex items-center gap-3 p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors"
                         >
                           <MapPin className="h-5 w-5 flex-shrink-0" style={{ color: accentColor }} />
@@ -223,9 +236,12 @@ export default async function LocationPage({ params }: LocationPageProps) {
                     Request Service in {location.cityName}
                   </h3>
                   <p className="text-sm text-slate-600 mb-6">
-                    Fill out the form and we&apos;ll get back to you promptly
+                    Fill out the form and we'll route your request to an independent, state-licensed HVAC professional.
                   </p>
                   <LeadForm microsite={microsite} />
+                  <p className="text-xs text-slate-500 mt-3">
+                    By submitting, you agree we may share your information with one or more independent contractors to facilitate service, and that we and/or matched contractors may contact you by phone, SMS, or email. Message and data rates may apply.
+                  </p>
                 </div>
 
                 {/* Quick Info */}
@@ -236,21 +252,24 @@ export default async function LocationPage({ params }: LocationPageProps) {
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2">
                       <span style={{ color: accentColor }}>✓</span>
-                      <span className="text-sm text-slate-700">Same-Day Service Available</span>
+                      <span className="text-sm text-slate-700">Rapid matching to nearby pros</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span style={{ color: accentColor }}>✓</span>
-                      <span className="text-sm text-slate-700">Licensed & Certified</span>
+                      <span className="text-sm text-slate-700">State-licensed, insured contractors</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span style={{ color: accentColor }}>✓</span>
-                      <span className="text-sm text-slate-700">Free Estimates</span>
+                      <span className="text-sm text-slate-700">Estimates and options provided by the contractor</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span style={{ color: accentColor }}>✓</span>
-                      <span className="text-sm text-slate-700">100% Satisfaction Guarantee</span>
+                      <span className="text-sm text-slate-700">Residential and light-commercial support</span>
                     </li>
                   </ul>
+                  <p className="text-xs text-slate-500 mt-3">
+                    We are a referral service and do not perform repairs.
+                  </p>
                 </div>
               </div>
             </div>
