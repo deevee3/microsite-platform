@@ -4,6 +4,7 @@ import Link from "next/link";
 import { getMicrositeByDomain, getAllMicrositeDomains } from "@/lib/data-client";
 import { getServicesForDomain } from "@/lib/page-helpers";
 import { ArrowRight, Phone } from "lucide-react";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 interface ServicesPageProps {
   params: Promise<{ domain: string }>;
@@ -56,6 +57,14 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
 
   return (
     <div className="min-h-screen bg-slate-50">
+      {/* Breadcrumbs */}
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Services" },
+        ]}
+      />
+
       {/* Page Header */}
       <div className="bg-white border-b border-slate-200">
         <div className="container mx-auto px-4 py-8 md:py-12">

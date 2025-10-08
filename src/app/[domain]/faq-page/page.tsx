@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getMicrositeByDomain, getAllMicrositeDomains } from "@/lib/data-client";
 import { Phone } from "lucide-react";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 interface FAQPageProps {
   params: Promise<{ domain: string }>;
@@ -97,6 +98,14 @@ export default async function FAQPage({ params }: FAQPageProps) {
 
   return (
     <div className="min-h-screen bg-slate-50">
+      {/* Breadcrumbs */}
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "FAQ" },
+        ]}
+      />
+
       {/* Page Header */}
       <div className="bg-white border-b border-slate-200">
         <div className="container mx-auto px-4 py-8 md:py-12">
