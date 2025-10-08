@@ -91,7 +91,8 @@
       "provider": "plausible",
       "script_url": "https://plausible.io/js/script.js"
     },
-    "build_status": "deployed"
+    "build_status": "deployed",
+    "has_multipage": true
   },
   {
     "id": 2,

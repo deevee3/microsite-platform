@@ -81,7 +81,9 @@ export function Hero({ microsite }: HeroProps) {
                 className="border-2 bg-white/15 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/25"
                 style={{ borderColor: hexToRgba(accent, 0.6) }}
               >
-                <a href="#contact-form">{secondaryCta.label}</a>
+                <a href={microsite.has_multipage ? "/services" : "#contact-form"}>
+                  {microsite.has_multipage ? "View All Services" : secondaryCta.label}
+                </a>
               </Button>
             )}
           </div>

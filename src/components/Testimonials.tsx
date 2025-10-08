@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Quote, Star, Users } from "lucide-react";
 import type { Microsite } from "@/lib/types";
 import { hexToRgba } from "@/lib/color";
@@ -102,6 +103,19 @@ export function Testimonials({ microsite }: TestimonialsProps) {
             </blockquote>
           ))}
         </div>
+
+        {/* Link to full reviews page for multi-page sites */}
+        {microsite.has_multipage && (
+          <div className="mt-12 text-center">
+            <Link
+              href="/reviews"
+              className="inline-flex items-center gap-2 text-lg font-semibold hover:underline"
+              style={{ color: accent }}
+            >
+              Read More Reviews →
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

@@ -6,7 +6,6 @@ import { ServiceHighlights } from "@/components/ServiceHighlights";
 import { LeadForm } from "@/components/LeadForm";
 import { Testimonials } from "@/components/Testimonials";
 import { FAQ } from "@/components/FAQ";
-import { Footer } from "@/components/Footer";
 import { getMicrositeByDomain, getAllMicrositeDomains } from "@/lib/data-client";
 
 interface MicrositePageProps {
@@ -57,7 +56,7 @@ export default async function MicrositePage({ params }: MicrositePageProps) {
   }
 
   return (
-    <main className="flex min-h-screen flex-col bg-slate-50">
+    <>
       <Hero microsite={microsite} />
       <ServiceHighlights microsite={microsite} />
       <Suspense fallback={<div className="py-16 text-center">Loading form…</div>}>
@@ -65,7 +64,6 @@ export default async function MicrositePage({ params }: MicrositePageProps) {
       </Suspense>
       <Testimonials microsite={microsite} />
       <FAQ microsite={microsite} />
-      <Footer microsite={microsite} />
-    </main>
+    </>
   );
 }

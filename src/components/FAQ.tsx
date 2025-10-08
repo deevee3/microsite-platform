@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { ChevronDown, HelpCircle } from "lucide-react";
 import type { Microsite } from "@/lib/types";
 import { hexToRgba } from "@/lib/color";
@@ -84,6 +85,19 @@ export function FAQ({ microsite }: FAQProps) {
             );
           })}
         </dl>
+
+        {/* Link to full FAQ page for multi-page sites */}
+        {microsite.has_multipage && (
+          <div className="mt-12 text-center">
+            <Link
+              href="/faq-page"
+              className="inline-flex items-center gap-2 text-lg font-semibold hover:underline"
+              style={{ color: accent }}
+            >
+              View All Questions →
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );
