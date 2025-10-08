@@ -143,6 +143,27 @@ select:focus-visible {
   outline-offset: 2px;
 }
 
+/* Skip to Content Link - Accessibility */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  z-index: 9999;
+  padding: 8px 16px;
+  background-color: var(--focus-ring);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 0 0 4px 0;
+  transition: top var(--duration-fast) ease-out;
+}
+
+.skip-to-content:focus {
+  top: 0;
+  outline: 3px solid #1e40af;
+  outline-offset: 2px;
+}
+
 /* Reduced Motion Support - WCAG 2.1 (2.3.3) */
 @media (prefers-reduced-motion: reduce) {
   *,
