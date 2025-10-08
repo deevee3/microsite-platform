@@ -24,8 +24,9 @@ export async function generateMetadata({ params }: ContactPageProps): Promise<Me
     };
   }
 
-  const title = `Contact Us | HVAC Repair Network | ${microsite.city}, ${microsite.state}`;
-  const description = `Get in touch with HVAC Repair Network in ${microsite.city}. Call ${microsite.call_tracking_number ?? microsite.primary_phone} for 24/7 emergency HVAC service.`;
+  const phone = microsite.call_tracking_number ?? microsite.primary_phone;
+  const title = `Contact Our ${microsite.city} HVAC Emergency Referral Network`;
+  const description = `Need emergency HVAC help in ${microsite.city}, ${microsite.state}? Call ${phone} or request a match online. We connect you 24/7 with nearby, state-licensed HVAC professionals. We are not a contractor.`;
 
   return {
     title,
@@ -67,10 +68,10 @@ export default async function ContactPage({ params }: ContactPageProps) {
       <div className="bg-white border-b border-slate-200">
         <div className="container mx-auto px-4 py-8 md:py-12">
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Contact Us
+            Contact Our {microsite.city} HVAC Emergency Referral Network
           </h1>
           <p className="text-xl text-slate-600">
-            Get in Touch for Expert HVAC Service in {microsite.city}
+            We match you with nearby, state-licensed HVAC professionals—24/7. We are not a contractor.
           </p>
         </div>
       </div>
@@ -85,7 +86,7 @@ export default async function ContactPage({ params }: ContactPageProps) {
                 Get In Touch
               </h2>
               <p className="text-lg text-slate-700 mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Tell us what's wrong—no-heat, no-cool, strange noises, leaks, or alerts—and we'll route your request to the closest available pro in our network. Arrival times vary by demand, traffic, and weather.
               </p>
 
               {/* Phone Number - Prominent */}
@@ -100,7 +101,7 @@ export default async function ContactPage({ params }: ContactPageProps) {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-slate-900 mb-2">
-                        Call Us Now
+                        Call 24/7 to Get Matched Now
                       </h3>
                       <a
                         href={`tel:${phoneNumber}`}
@@ -111,7 +112,7 @@ export default async function ContactPage({ params }: ContactPageProps) {
                         {phoneNumber}
                       </a>
                       <p className="text-sm text-slate-600 mt-2">
-                        Available 24/7 for Emergency Service
+                        Calls may be recorded for quality and routing.
                       </p>
                     </div>
                   </div>
@@ -152,10 +153,10 @@ export default async function ContactPage({ params }: ContactPageProps) {
                       Hours of Operation
                     </h3>
                     <p className="text-slate-700">
-                      24/7 Emergency Service Available
+                      24/7 intake and emergency matching. Contractor availability and arrival times vary.
                     </p>
                     <p className="text-sm text-slate-600 mt-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      If you suspect a gas leak or carbon monoxide, evacuate immediately and call your utility or 911.
                     </p>
                   </div>
                 </div>
@@ -169,19 +170,19 @@ export default async function ContactPage({ params }: ContactPageProps) {
                 <ul className="space-y-2 text-slate-700">
                   <li className="flex items-start gap-2">
                     <span style={{ color: accentColor }}>✓</span>
-                    <span>Fast response times</span>
+                    <span>Rapid matching to a nearby, available pro</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span style={{ color: accentColor }}>✓</span>
-                    <span>Licensed and insured technicians</span>
+                    <span>State-licensed, insured HVAC professionals in our network</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span style={{ color: accentColor }}>✓</span>
-                    <span>Upfront pricing, no hidden fees</span>
+                    <span>Estimates and options provided by the contractor before work begins</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span style={{ color: accentColor }}>✓</span>
-                    <span>100% satisfaction guarantee</span>
+                    <span>Support for residential systems and light-commercial RTUs</span>
                   </li>
                 </ul>
               </div>
@@ -194,9 +195,12 @@ export default async function ContactPage({ params }: ContactPageProps) {
                   Request Service
                 </h2>
                 <p className="text-slate-700 mb-6">
-                  Fill out the form below and we&apos;ll get back to you as soon as possible.
+                  Fill out the form and we'll route your request to an independent, state-licensed HVAC professional. Availability varies by time and location.
                 </p>
                 <LeadForm microsite={microsite} />
+                <p className="text-xs text-slate-500 mt-4">
+                  By submitting, you agree we may share your information with one or more independent contractors to facilitate service, and that we and/or matched contractors may contact you by phone, SMS, or email. Message and data rates may apply. Consent is not a condition of purchase. See our Privacy Policy for details.
+                </p>
               </div>
             </div>
           </div>
