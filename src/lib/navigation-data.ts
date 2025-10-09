@@ -9,10 +9,38 @@ import type { NavigationItem } from "./types";
  * @returns Array of navigation items or empty array
  */
 export function getNavigationItems(domain: string, hasMultipage: boolean = false): NavigationItem[] {
-  // Only return navigation for Cincinnati (or other multi-page enabled sites)
+  // Only return navigation for multi-page enabled sites
   if (!hasMultipage) {
     return [];
   }
+
+  // Common services navigation (same for all domains)
+  const servicesNav = {
+    label: "Services",
+    href: "/services",
+    children: [
+      {
+        label: "Furnace Repair",
+        href: "/services/furnace-repair",
+      },
+      {
+        label: "AC Installation",
+        href: "/services/ac-installation",
+      },
+      {
+        label: "Duct Cleaning",
+        href: "/services/duct-cleaning",
+      },
+      {
+        label: "Thermostat Replacement",
+        href: "/services/thermostat-replacement",
+      },
+      {
+        label: "Emergency HVAC",
+        href: "/services/emergency-hvac",
+      },
+    ],
+  };
 
   // Cincinnati HVAC navigation structure
   if (domain === "hvacrepair-cincinnati-oh.com") {
@@ -25,32 +53,7 @@ export function getNavigationItems(domain: string, hasMultipage: boolean = false
         label: "About",
         href: "/about",
       },
-      {
-        label: "Services",
-        href: "/services",
-        children: [
-          {
-            label: "Furnace Repair",
-            href: "/services/furnace-repair",
-          },
-          {
-            label: "AC Installation",
-            href: "/services/ac-installation",
-          },
-          {
-            label: "Duct Cleaning",
-            href: "/services/duct-cleaning",
-          },
-          {
-            label: "Thermostat Replacement",
-            href: "/services/thermostat-replacement",
-          },
-          {
-            label: "Emergency HVAC",
-            href: "/services/emergency-hvac",
-          },
-        ],
-      },
+      servicesNav,
       {
         label: "Service Area",
         href: "/service-area",
@@ -92,8 +95,164 @@ export function getNavigationItems(domain: string, hasMultipage: boolean = false
     ];
   }
 
-  // Future: Add navigation for other multi-page enabled microsites
-  // if (domain === "another-domain.com") { ... }
+  // Dayton HVAC navigation structure
+  if (domain === "hvacrepair-dayton-oh.com") {
+    return [
+      {
+        label: "Home",
+        href: "/",
+      },
+      {
+        label: "About",
+        href: "/about",
+      },
+      servicesNav,
+      {
+        label: "Service Area",
+        href: "/service-area",
+        children: [
+          {
+            label: "Kettering",
+            href: "/locations/kettering",
+          },
+          {
+            label: "Beavercreek",
+            href: "/locations/beavercreek",
+          },
+          {
+            label: "Centerville",
+            href: "/locations/centerville",
+          },
+          {
+            label: "Huber Heights",
+            href: "/locations/huber-heights",
+          },
+          {
+            label: "View All Locations",
+            href: "/service-area",
+          },
+        ],
+      },
+      {
+        label: "Contact",
+        href: "/contact",
+      },
+      {
+        label: "Reviews",
+        href: "/reviews",
+      },
+      {
+        label: "FAQ",
+        href: "/faq-page",
+      },
+    ];
+  }
+
+  // Blue Ash HVAC navigation structure
+  if (domain === "hvacrepair-blue-ash-oh.com") {
+    return [
+      {
+        label: "Home",
+        href: "/",
+      },
+      {
+        label: "About",
+        href: "/about",
+      },
+      servicesNav,
+      {
+        label: "Service Area",
+        href: "/service-area",
+        children: [
+          {
+            label: "Sharonville",
+            href: "/locations/sharonville",
+          },
+          {
+            label: "Montgomery",
+            href: "/locations/montgomery",
+          },
+          {
+            label: "Kenwood",
+            href: "/locations/kenwood",
+          },
+          {
+            label: "Sycamore Township",
+            href: "/locations/sycamore-township",
+          },
+          {
+            label: "View All Locations",
+            href: "/service-area",
+          },
+        ],
+      },
+      {
+        label: "Contact",
+        href: "/contact",
+      },
+      {
+        label: "Reviews",
+        href: "/reviews",
+      },
+      {
+        label: "FAQ",
+        href: "/faq-page",
+      },
+    ];
+  }
+
+  // Newport KY HVAC navigation structure
+  if (domain === "hvacrepair-newport-ky.com") {
+    return [
+      {
+        label: "Home",
+        href: "/",
+      },
+      {
+        label: "About",
+        href: "/about",
+      },
+      servicesNav,
+      {
+        label: "Service Area",
+        href: "/service-area",
+        children: [
+          {
+            label: "Covington",
+            href: "/locations/covington",
+          },
+          {
+            label: "Bellevue",
+            href: "/locations/bellevue",
+          },
+          {
+            label: "Fort Thomas",
+            href: "/locations/fort-thomas",
+          },
+          {
+            label: "Highland Heights",
+            href: "/locations/highland-heights",
+          },
+          {
+            label: "View All Locations",
+            href: "/service-area",
+          },
+        ],
+      },
+      {
+        label: "Contact",
+        href: "/contact",
+      },
+      {
+        label: "Reviews",
+        href: "/reviews",
+      },
+      {
+        label: "FAQ",
+        href: "/faq-page",
+      },
+    ];
+  }
 
   return [];
 }
@@ -110,26 +269,35 @@ export function getFooterNavigationItems(domain: string, hasMultipage: boolean =
     return null;
   }
 
-  if (domain === "hvacrepair-cincinnati-oh.com") {
-    return {
-      quickLinks: [
-        { label: "Services", href: "/services" },
-        { label: "Service Area", href: "/service-area" },
-        { label: "Reviews", href: "/reviews" },
-        { label: "FAQ", href: "/faq-page" },
-      ],
-      services: [
-        { label: "Furnace Repair", href: "/services/furnace-repair" },
-        { label: "AC Installation", href: "/services/ac-installation" },
-        { label: "Duct Cleaning", href: "/services/duct-cleaning" },
-        { label: "Thermostat Replacement", href: "/services/thermostat-replacement" },
-        { label: "Emergency HVAC", href: "/services/emergency-hvac" },
-      ],
-      legal: [
-        { label: "Privacy Policy", href: "/privacy" },
-        { label: "Terms of Service", href: "/terms" },
-      ],
-    };
+  // Common footer structure for all multi-page sites
+  const commonFooter = {
+    quickLinks: [
+      { label: "Services", href: "/services" },
+      { label: "Service Area", href: "/service-area" },
+      { label: "Reviews", href: "/reviews" },
+      { label: "FAQ", href: "/faq-page" },
+    ],
+    services: [
+      { label: "Furnace Repair", href: "/services/furnace-repair" },
+      { label: "AC Installation", href: "/services/ac-installation" },
+      { label: "Duct Cleaning", href: "/services/duct-cleaning" },
+      { label: "Thermostat Replacement", href: "/services/thermostat-replacement" },
+      { label: "Emergency HVAC", href: "/services/emergency-hvac" },
+    ],
+    legal: [
+      { label: "Privacy Policy", href: "/privacy" },
+      { label: "Terms of Service", href: "/terms" },
+    ],
+  };
+
+  // Return common footer for all multi-page enabled domains
+  if (
+    domain === "hvacrepair-cincinnati-oh.com" ||
+    domain === "hvacrepair-dayton-oh.com" ||
+    domain === "hvacrepair-blue-ash-oh.com" ||
+    domain === "hvacrepair-newport-ky.com"
+  ) {
+    return commonFooter;
   }
 
   return null;
