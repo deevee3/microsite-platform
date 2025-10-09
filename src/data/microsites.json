@@ -186,7 +186,8 @@
       "provider": "plausible",
       "script_url": "https://plausible.io/js/script.js"
     },
-    "build_status": "pending"
+    "build_status": "pending",
+    "has_multipage": true
   },
   {
     "id": 3,
@@ -276,7 +277,8 @@
       "provider": "plausible",
       "script_url": "https://plausible.io/js/script.js"
     },
-    "build_status": "pending"
+    "build_status": "pending",
+    "has_multipage": true
   },
   {
     "id": 4,
@@ -366,6 +368,7 @@
       "provider": "plausible",
       "script_url": "https://plausible.io/js/script.js"
     },
-    "build_status": "pending"
+    "build_status": "pending",
+    "has_multipage": true
   }
 ]

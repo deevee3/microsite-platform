@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "furnace-repair",
+    "title": "Furnace Repair",
+    "h1": "Furnace Repair in Blue Ash — Get Matched 24/7",
+    "metaTitle": "Furnace Repair in Blue Ash, OH | 24/7 Match to Licensed Pros",
+    "metaDescription": "[PLACEHOLDER - CUSTOMIZE FOR BLUE ASH] No-heat in Blue Ash? Get matched 24/7 with a nearby, state-licensed furnace repair pro. Fast intake, clear options from the contractor.",
+    "content": "[PLACEHOLDER - CUSTOMIZE FOR BLUE ASH]\n\nReplace this placeholder content with Blue Ash-specific furnace repair information. Focus on Summit Park, Sharon Woods, Kenwood areas.\n\nInclude: Common issues, what to expect, brands serviced, parts availability, safety notes.\n\n[END PLACEHOLDER]",
+    "ctaText": "Get Matched for Furnace Repair",
+    "relatedServices": ["emergency-hvac", "thermostat-replacement", "duct-cleaning"]
+  },
+  {
+    "slug": "ac-installation",
+    "title": "AC Installation",
+    "h1": "AC Installation in Blue Ash — Get Quotes from Licensed Pros",
+    "metaTitle": "AC Installation in Blue Ash, OH | Licensed Pro Matching",
+    "metaDescription": "[PLACEHOLDER - CUSTOMIZE FOR BLUE ASH] Upgrade your AC in Blue Ash. Get matched with state-licensed installers for right-sized, energy-efficient systems.",
+    "content": "[PLACEHOLDER - CUSTOMIZE FOR BLUE ASH]\n\nReplace this placeholder content with Blue Ash-specific AC installation information.\n\nInclude: Sizing, efficiency options, what to expect, tax credits, timelines.\n\n[END PLACEHOLDER]",
+    "ctaText": "Request AC Installation Quote",
+    "relatedServices": ["emergency-hvac", "duct-cleaning", "thermostat-replacement"]
+  },
+  {
+    "slug": "duct-cleaning",
+    "title": "Duct Cleaning",
+    "h1": "Air Duct Cleaning in Blue Ash — Get Matched Today",
+    "metaTitle": "Duct Cleaning in Blue Ash, OH | Referral to Licensed Pros",
+    "metaDescription": "[PLACEHOLDER - CUSTOMIZE FOR BLUE ASH] Improve air quality and airflow. Get matched with a nearby pro for duct cleaning in Blue Ash.",
+    "content": "[PLACEHOLDER - CUSTOMIZE FOR BLUE ASH]\n\nReplace this placeholder content with Blue Ash-specific duct cleaning information.\n\nInclude: Benefits, process, what to expect, scope, guarantees.\n\n[END PLACEHOLDER]",
+    "ctaText": "Book Duct Cleaning Match",
+    "relatedServices": ["furnace-repair", "ac-installation", "emergency-hvac"]
+  },
+  {
+    "slug": "thermostat-replacement",
+    "title": "Thermostat Replacement",
+    "h1": "Thermostat Replacement in Blue Ash — Smart & Programmable Options",
+    "metaTitle": "Thermostat Replacement in Blue Ash, OH | Licensed Pro Matching",
+    "metaDescription": "[PLACEHOLDER - CUSTOMIZE FOR BLUE ASH] Upgrade to a smart thermostat in Blue Ash. Get matched with a licensed pro for install and setup.",
+    "content": "[PLACEHOLDER - CUSTOMIZE FOR BLUE ASH]\n\nReplace this placeholder content with Blue Ash-specific thermostat replacement information.\n\nInclude: Brands supported, compatibility checks, C-wire, installation process, features.\n\n[END PLACEHOLDER]",
+    "ctaText": "Get Your Thermostat Replaced",
+    "relatedServices": ["furnace-repair", "ac-installation", "emergency-hvac"]
+  },
+  {
+    "slug": "emergency-hvac",
+    "title": "Emergency HVAC",
+    "h1": "24/7 Emergency HVAC in Blue Ash — Get Matched Fast",
+    "metaTitle": "Emergency HVAC in Blue Ash, OH | 24/7 Match to Licensed Pros",
+    "metaDescription": "[PLACEHOLDER - CUSTOMIZE FOR BLUE ASH] 24/7 emergency HVAC in Blue Ash. We route no‑heat/no‑cool calls to nearby, licensed pros for rapid response.",
+    "content": "[PLACEHOLDER - CUSTOMIZE FOR BLUE ASH]\n\nReplace this placeholder content with Blue Ash-specific emergency HVAC information.\n\nInclude: Common emergencies, what to expect, availability notes, safety warnings, pricing.\n\n[END PLACEHOLDER]",
+    "ctaText": "Get Emergency Match Now",
+    "relatedServices": ["furnace-repair", "ac-installation", "thermostat-replacement"]
+  }
+]

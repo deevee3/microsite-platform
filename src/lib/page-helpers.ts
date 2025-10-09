@@ -1,6 +1,12 @@
 import type { Service, Location } from "./types";
 import cincinnatiServicesData from "@/data/cincinnati-services.json";
 import cincinnatiLocationsData from "@/data/cincinnati-locations.json";
+import daytonServicesData from "@/data/dayton-services.json";
+import daytonLocationsData from "@/data/dayton-locations.json";
+import blueAshServicesData from "@/data/blue-ash-services.json";
+import blueAshLocationsData from "@/data/blue-ash-locations.json";
+import newportServicesData from "@/data/newport-services.json";
+import newportLocationsData from "@/data/newport-locations.json";
 
 /**
  * Get all services for a specific domain
@@ -11,8 +17,16 @@ export function getServicesForDomain(domain: string): Service[] {
   if (domain === "hvacrepair-cincinnati-oh.com") {
     return cincinnatiServicesData as Service[];
   }
+  if (domain === "hvacrepair-dayton-oh.com") {
+    return daytonServicesData as Service[];
+  }
+  if (domain === "hvacrepair-blue-ash-oh.com") {
+    return blueAshServicesData as Service[];
+  }
+  if (domain === "hvacrepair-newport-ky.com") {
+    return newportServicesData as Service[];
+  }
   
-  // Future: Add other domains here
   return [];
 }
 
@@ -36,8 +50,16 @@ export function getLocationsForDomain(domain: string): Location[] {
   if (domain === "hvacrepair-cincinnati-oh.com") {
     return cincinnatiLocationsData as Location[];
   }
+  if (domain === "hvacrepair-dayton-oh.com") {
+    return daytonLocationsData as Location[];
+  }
+  if (domain === "hvacrepair-blue-ash-oh.com") {
+    return blueAshLocationsData as Location[];
+  }
+  if (domain === "hvacrepair-newport-ky.com") {
+    return newportLocationsData as Location[];
+  }
   
-  // Future: Add other domains here
   return [];
 }
 

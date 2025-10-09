@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "covington",
+    "cityName": "Covington",
+    "state": "KY",
+    "h1": "Emergency HVAC Repair in Covington",
+    "metaTitle": "[PLACEHOLDER] Emergency HVAC Repair in Covington, KY | 24/7 Referral Network",
+    "metaDescription": "[PLACEHOLDER - CUSTOMIZE FOR COVINGTON] 24/7 HVAC emergency matching in Covington. Get connected with nearby, Kentucky state-licensed pros for fast furnace and AC repair.",
+    "content": "[PLACEHOLDER - CUSTOMIZE FOR COVINGTON]\n\nReplace this with Covington, KY-specific content. Include Mainstrasse Village, riverfront areas, key neighborhoods.\n\n[END PLACEHOLDER]",
+    "ctaText": "Call for Emergency Service in Covington",
+    "nearbyLocations": [
+      "bellevue",
+      "fort-thomas",
+      "latonia"
+    ]
+  },
+  {
+    "slug": "bellevue",
+    "cityName": "Bellevue",
+    "state": "KY",
+    "h1": "Emergency HVAC Repair in Bellevue",
+    "metaTitle": "[PLACEHOLDER] 24/7 Emergency HVAC in Bellevue, KY | Get Matched with Licensed Pros",
+    "metaDescription": "[PLACEHOLDER - CUSTOMIZE FOR BELLEVUE] Need HVAC repair in Bellevue? We match you 24/7 with nearby, Kentucky state-licensed pros.",
+    "content": "[PLACEHOLDER - CUSTOMIZE FOR BELLEVUE]\n\nReplace this with Bellevue, KY-specific content. Include Fairfield Avenue, riverfront, historic district.\n\n[END PLACEHOLDER]",
+    "ctaText": "Call for Emergency Service in Bellevue",
+    "nearbyLocations": [
+      "covington",
+      "fort-thomas",
+      "dayton-ky"
+    ]
+  },
+  {
+    "slug": "fort-thomas",
+    "cityName": "Fort Thomas",
+    "state": "KY",
+    "h1": "Emergency HVAC Repair in Fort Thomas",
+    "metaTitle": "[PLACEHOLDER] Emergency HVAC Repair in Fort Thomas, KY | 24/7 Referral Service",
+    "metaDescription": "[PLACEHOLDER - CUSTOMIZE FOR FORT THOMAS] 24/7 HVAC emergency matching in Fort Thomas. Get connected with licensed pros near Tower Park.",
+    "content": "[PLACEHOLDER - CUSTOMIZE FOR FORT THOMAS]\n\nReplace this with Fort Thomas, KY-specific content. Include Tower Park, Midway area, key neighborhoods.\n\n[END PLACEHOLDER]",
+    "ctaText": "Call for Emergency Service in Fort Thomas",
+    "nearbyLocations": [
+      "covington",
+      "bellevue",
+      "highland-heights"
+    ]
+  },
+  {
+    "slug": "highland-heights",
+    "cityName": "Highland Heights",
+    "state": "KY",
+    "h1": "Emergency HVAC Repair in Highland Heights",
+    "metaTitle": "[PLACEHOLDER] Emergency HVAC in Highland Heights, KY | 24/7 Licensed Pro Matching",
+    "metaDescription": "[PLACEHOLDER - CUSTOMIZE FOR HIGHLAND HEIGHTS] Highland Heights 24/7 HVAC referral service. Get matched with nearby, licensed pros fast.",
+    "content": "[PLACEHOLDER - CUSTOMIZE FOR HIGHLAND HEIGHTS]\n\nReplace this with Highland Heights, KY-specific content. Include NKU area, local neighborhoods.\n\n[END PLACEHOLDER]",
+    "ctaText": "Call for Emergency Service in Highland Heights",
+    "nearbyLocations": [
+      "fort-thomas",
+      "cold-spring",
+      "alexandria"
+    ]
+  }
+]

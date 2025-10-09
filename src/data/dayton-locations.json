@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "kettering",
+    "cityName": "Kettering",
+    "state": "OH",
+    "h1": "Emergency HVAC Repair in Kettering",
+    "metaTitle": "[PLACEHOLDER] Emergency HVAC Repair in Kettering, OH | 24/7 Referral Network",
+    "metaDescription": "[PLACEHOLDER - CUSTOMIZE FOR KETTERING] 24/7 HVAC emergency matching in Kettering. Get connected with nearby, state-licensed pros for fast furnace and AC repair.",
+    "content": "[PLACEHOLDER - CUSTOMIZE FOR KETTERING]\n\nReplace this with Kettering-specific content. Include local landmarks, neighborhoods, service areas.\n\n[END PLACEHOLDER]",
+    "ctaText": "Call for Emergency Service in Kettering",
+    "nearbyLocations": [
+      "beavercreek",
+      "centerville",
+      "oakwood"
+    ]
+  },
+  {
+    "slug": "beavercreek",
+    "cityName": "Beavercreek",
+    "state": "OH",
+    "h1": "Emergency HVAC Repair in Beavercreek",
+    "metaTitle": "[PLACEHOLDER] 24/7 Emergency HVAC in Beavercreek, OH | Get Matched with Licensed Pros",
+    "metaDescription": "[PLACEHOLDER - CUSTOMIZE FOR BEAVERCREEK] Need HVAC repair in Beavercreek? We match you 24/7 with nearby, state-licensed pros near WPAFB and The Greene.",
+    "content": "[PLACEHOLDER - CUSTOMIZE FOR BEAVERCREEK]\n\nReplace this with Beavercreek-specific content. Include The Greene, WPAFB area, local neighborhoods.\n\n[END PLACEHOLDER]",
+    "ctaText": "Call for Emergency Service in Beavercreek",
+    "nearbyLocations": [
+      "kettering",
+      "centerville",
+      "fairborn"
+    ]
+  },
+  {
+    "slug": "centerville",
+    "cityName": "Centerville",
+    "state": "OH",
+    "h1": "Emergency HVAC Repair in Centerville",
+    "metaTitle": "[PLACEHOLDER] Emergency HVAC Repair in Centerville, OH | 24/7 Referral Service",
+    "metaDescription": "[PLACEHOLDER - CUSTOMIZE FOR CENTERVILLE] 24/7 HVAC emergency matching in Centerville. Get connected with licensed pros near Town Square and I-675.",
+    "content": "[PLACEHOLDER - CUSTOMIZE FOR CENTERVILLE]\n\nReplace this with Centerville-specific content. Include Washington Township area, Town Square, key neighborhoods.\n\n[END PLACEHOLDER]",
+    "ctaText": "Call for Emergency Service in Centerville",
+    "nearbyLocations": [
+      "kettering",
+      "beavercreek",
+      "miamisburg"
+    ]
+  },
+  {
+    "slug": "huber-heights",
+    "cityName": "Huber Heights",
+    "state": "OH",
+    "h1": "Emergency HVAC Repair in Huber Heights",
+    "metaTitle": "[PLACEHOLDER] Emergency HVAC in Huber Heights, OH | 24/7 Licensed Pro Matching",
+    "metaDescription": "[PLACEHOLDER - CUSTOMIZE FOR HUBER HEIGHTS] Huber Heights 24/7 HVAC referral service. Get matched with nearby, licensed pros fast.",
+    "content": "[PLACEHOLDER - CUSTOMIZE FOR HUBER HEIGHTS]\n\nReplace this with Huber Heights-specific content. Include local landmarks and key service areas.\n\n[END PLACEHOLDER]",
+    "ctaText": "Call for Emergency Service in Huber Heights",
+    "nearbyLocations": [
+      "vandalia",
+      "riverside",
+      "trotwood"
+    ]
+  }
+]

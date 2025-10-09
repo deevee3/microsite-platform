@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "furnace-repair",
+    "title": "Furnace Repair",
+    "h1": "Furnace Repair in Dayton — Get Matched 24/7",
+    "metaTitle": "Furnace Repair in Dayton, OH | 24/7 Match to Licensed Pros",
+    "metaDescription": "[PLACEHOLDER - CUSTOMIZE FOR DAYTON] No-heat in Dayton? Get matched 24/7 with a nearby, state-licensed furnace repair pro. Fast intake, clear options from the contractor.",
+    "content": "[PLACEHOLDER - CUSTOMIZE FOR DAYTON]\n\nReplace this placeholder content with Dayton-specific furnace repair information. Follow the Cincinnati pattern but customize for Dayton, Kettering, Beavercreek, Centerville areas.\n\nInclude: Common issues, what to expect, brands serviced, parts availability, safety notes.\n\n[END PLACEHOLDER]",
+    "ctaText": "Get Matched for Furnace Repair",
+    "relatedServices": ["emergency-hvac", "thermostat-replacement", "duct-cleaning"]
+  },
+  {
+    "slug": "ac-installation",
+    "title": "AC Installation",
+    "h1": "AC Installation in Dayton — Get Quotes from Licensed Pros",
+    "metaTitle": "AC Installation in Dayton, OH | Licensed Pro Matching",
+    "metaDescription": "[PLACEHOLDER - CUSTOMIZE FOR DAYTON] Upgrade your AC in Dayton. Get matched with state-licensed installers for right-sized, energy-efficient systems.",
+    "content": "[PLACEHOLDER - CUSTOMIZE FOR DAYTON]\n\nReplace this placeholder content with Dayton-specific AC installation information. Focus on Miami Valley specifics.\n\nInclude: Sizing, efficiency options, what to expect, tax credits, timelines.\n\n[END PLACEHOLDER]",
+    "ctaText": "Request AC Installation Quote",
+    "relatedServices": ["emergency-hvac", "duct-cleaning", "thermostat-replacement"]
+  },
+  {
+    "slug": "duct-cleaning",
+    "title": "Duct Cleaning",
+    "h1": "Air Duct Cleaning in Dayton — Get Matched Today",
+    "metaTitle": "Duct Cleaning in Dayton, OH | Referral to Licensed Pros",
+    "metaDescription": "[PLACEHOLDER - CUSTOMIZE FOR DAYTON] Improve air quality and airflow. Get matched with a nearby pro for duct cleaning in Dayton.",
+    "content": "[PLACEHOLDER - CUSTOMIZE FOR DAYTON]\n\nReplace this placeholder content with Dayton-specific duct cleaning information.\n\nInclude: Benefits, process, what to expect, scope, guarantees.\n\n[END PLACEHOLDER]",
+    "ctaText": "Book Duct Cleaning Match",
+    "relatedServices": ["furnace-repair", "ac-installation", "emergency-hvac"]
+  },
+  {
+    "slug": "thermostat-replacement",
+    "title": "Thermostat Replacement",
+    "h1": "Thermostat Replacement in Dayton — Smart & Programmable Options",
+    "metaTitle": "Thermostat Replacement in Dayton, OH | Licensed Pro Matching",
+    "metaDescription": "[PLACEHOLDER - CUSTOMIZE FOR DAYTON] Upgrade to a smart thermostat in Dayton. Get matched with a licensed pro for install and setup.",
+    "content": "[PLACEHOLDER - CUSTOMIZE FOR DAYTON]\n\nReplace this placeholder content with Dayton-specific thermostat replacement information.\n\nInclude: Brands supported, compatibility checks, C-wire, installation process, features.\n\n[END PLACEHOLDER]",
+    "ctaText": "Get Your Thermostat Replaced",
+    "relatedServices": ["furnace-repair", "ac-installation", "emergency-hvac"]
+  },
+  {
+    "slug": "emergency-hvac",
+    "title": "Emergency HVAC",
+    "h1": "24/7 Emergency HVAC in Dayton — Get Matched Fast",
+    "metaTitle": "Emergency HVAC in Dayton, OH | 24/7 Match to Licensed Pros",
+    "metaDescription": "[PLACEHOLDER - CUSTOMIZE FOR DAYTON] 24/7 emergency HVAC in Dayton. We route no‑heat/no‑cool calls to nearby, licensed pros for rapid response.",
+    "content": "[PLACEHOLDER - CUSTOMIZE FOR DAYTON]\n\nReplace this placeholder content with Dayton-specific emergency HVAC information.\n\nInclude: Common emergencies, what to expect, availability notes, safety warnings, pricing.\n\n[END PLACEHOLDER]",
+    "ctaText": "Get Emergency Match Now",
+    "relatedServices": ["furnace-repair", "ac-installation", "thermostat-replacement"]
+  }
+]

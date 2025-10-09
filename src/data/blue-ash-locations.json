@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "sharonville",
+    "cityName": "Sharonville",
+    "state": "OH",
+    "h1": "Emergency HVAC Repair in Sharonville",
+    "metaTitle": "[PLACEHOLDER] 24/7 Emergency HVAC in Sharonville, OH | Referral to Licensed Pros",
+    "metaDescription": "[PLACEHOLDER - CUSTOMIZE FOR SHARONVILLE] Sharonville HVAC emergencies—Convention Center to Tri-County. Get matched with a nearby, licensed pro fast.",
+    "content": "[PLACEHOLDER - CUSTOMIZE FOR SHARONVILLE]\n\nReplace this with Sharonville-specific content. Include Convention Center area, I-75 corridor, Tri-County neighborhoods.\n\n[END PLACEHOLDER]",
+    "ctaText": "Call for Emergency Service in Sharonville",
+    "nearbyLocations": [
+      "montgomery",
+      "springdale",
+      "kenwood"
+    ]
+  },
+  {
+    "slug": "montgomery",
+    "cityName": "Montgomery",
+    "state": "OH",
+    "h1": "Emergency HVAC Repair in Montgomery",
+    "metaTitle": "[PLACEHOLDER] Emergency HVAC in Montgomery, OH | 24/7 Referral Network",
+    "metaDescription": "[PLACEHOLDER - CUSTOMIZE FOR MONTGOMERY] Montgomery emergency HVAC matching—Old Montgomery to Montgomery Quarter. Licensed pros on call.",
+    "content": "[PLACEHOLDER - CUSTOMIZE FOR MONTGOMERY]\n\nReplace this with Montgomery-specific content. Include Montgomery Road, Old Montgomery, Montgomery Quarter district.\n\n[END PLACEHOLDER]",
+    "ctaText": "Call for Emergency Service in Montgomery",
+    "nearbyLocations": [
+      "sharonville",
+      "kenwood",
+      "loveland"
+    ]
+  },
+  {
+    "slug": "kenwood",
+    "cityName": "Kenwood",
+    "state": "OH",
+    "h1": "Emergency HVAC Repair in Kenwood",
+    "metaTitle": "[PLACEHOLDER] 24/7 Emergency HVAC in Kenwood, OH | Licensed Pro Matching",
+    "metaDescription": "[PLACEHOLDER - CUSTOMIZE FOR KENWOOD] Kenwood HVAC emergencies—Kenwood Towne Centre area. Fast connection to licensed pros.",
+    "content": "[PLACEHOLDER - CUSTOMIZE FOR KENWOOD]\n\nReplace this with Kenwood-specific content. Include Kenwood Towne Centre, Kenwood Road, nearby neighborhoods.\n\n[END PLACEHOLDER]",
+    "ctaText": "Call for Emergency Service in Kenwood",
+    "nearbyLocations": [
+      "montgomery",
+      "sharonville",
+      "madeira"
+    ]
+  },
+  {
+    "slug": "sycamore-township",
+    "cityName": "Sycamore Township",
+    "state": "OH",
+    "h1": "Emergency HVAC Repair in Sycamore Township",
+    "metaTitle": "[PLACEHOLDER] Emergency HVAC in Sycamore Township, OH | 24/7 Referral",
+    "metaDescription": "[PLACEHOLDER - CUSTOMIZE FOR SYCAMORE TOWNSHIP] Sycamore Township HVAC emergencies. Get matched with licensed pros fast.",
+    "content": "[PLACEHOLDER - CUSTOMIZE FOR SYCAMORE TOWNSHIP]\n\nReplace this with Sycamore Township-specific content. Include key neighborhoods and landmarks.\n\n[END PLACEHOLDER]",
+    "ctaText": "Call for Emergency Service in Sycamore Township",
+    "nearbyLocations": [
+      "montgomery",
+      "kenwood",
+      "loveland"
+    ]
+  }
+]
