@@ -169,7 +169,7 @@ export default async function PrivacyPage({ params }: PrivacyPageProps) {
                 <li>Access/Update: You can request access to or correction of your information.</li>
                 <li>Deletion: You can request deletion of your information, subject to certain exceptions.</li>
                 <li>Opt-Out: You can opt out of marketing communications and certain data sharing where applicable by law.</li>
-                <li>Do Not Track: We currently do not respond to browser "Do Not Track" signals.</li>
+                <li>Do Not Track: We currently do not respond to browser &quot;Do Not Track&quot; signals.</li>
               </ul>
               <p className="text-slate-700">
                 To make a request, contact us at {policyEmail}. We may need to verify your identity before fulfilling requests.
@@ -177,7 +177,7 @@ export default async function PrivacyPage({ params }: PrivacyPageProps) {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">Children's Privacy</h2>
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">Children&apos;s Privacy</h2>
               <p className="text-slate-700 mb-4">
                 Our service is intended for adults and is not directed to children under 13. We do not knowingly collect personal information from children under 13. If you believe a child provided personal information, contact us and we will delete it.
               </p>
